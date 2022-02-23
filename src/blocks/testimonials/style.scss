@@ -1,0 +1,83 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bm-blocks-testimonials {
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  position: relative;
+  width: auto;
+
+  .swiper-slide {
+    height: auto !important;
+    gap: 1rem;
+  }
+
+  .swiper-button-next {
+    right: -40px;
+  }
+
+  .swiper-button-prev {
+    left: -40px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #7f7f7f;
+    transform: scale(0.5);
+  }
+
+  &-slide-text {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  &-slide-stars {
+    color: #d9d5a6;
+
+    svg {
+      width: 1.125em;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 300px !important;
+    min-width: 300px;
+    max-width: 300px !important;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    @supports (gap: 1rem) {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    &.swiper-lazy-loaded {
+      opacity: 1;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}

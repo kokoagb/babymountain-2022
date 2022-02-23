@@ -1,0 +1,53 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bm-blocks-product-categories {
+  position: relative;
+
+  &-category {
+    display: block;
+    position: relative;
+    text-decoration: none;
+
+    &-image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s;
+
+      &.swiper-lazy-loaded {
+        opacity: 1;
+      }
+    }
+
+    &-name {
+      position: absolute;
+      left: 1rem;
+      right: 0;
+      bottom: 1rem;
+      padding: 1rem;
+      padding-left: 1rem;
+      background-color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+    }
+  }
+
+  .swiper-button-next {
+    right: -40px;
+  }
+
+  .swiper-button-prev {
+    left: -40px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #7f7f7f;
+    transform: scale(0.5);
+  }
+}

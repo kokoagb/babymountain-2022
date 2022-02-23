@@ -1,0 +1,93 @@
+.tippy-box[data-theme='babymountain'] {
+  --shadow-color: 0deg 0% 63%;
+
+  outline: 0;
+  position: relative;
+  transition-property: transform, visibility, opacity;
+  white-space: normal;
+  border-radius: 0.5rem;
+  box-shadow: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+
+  &[data-animation='fade'][data-state='hidden'] {
+    opacity: 0;
+  }
+
+  [data-tippy-root] {
+    max-width: calc(100vw - 10px);
+  }
+
+  &[data-placement^='top'] > .tippy-arrow {
+    bottom: 0;
+  }
+
+  &[data-placement^='top'] > .tippy-arrow:before {
+    border-top-color: initial;
+    border-width: 8px 8px 0;
+    bottom: -7px;
+    left: 0;
+    transform-origin: center top;
+  }
+
+  &[data-placement^='bottom'] > .tippy-arrow {
+    top: 0;
+  }
+
+  &[data-placement^='bottom'] > .tippy-arrow:before {
+    border-bottom-color: initial;
+    border-width: 0 8px 8px;
+    left: 0;
+    top: -7px;
+    transform-origin: center bottom;
+  }
+
+  &[data-placement^='left'] > .tippy-arrow {
+    right: 0;
+  }
+
+  &[data-placement^='left'] > .tippy-arrow:before {
+    border-left-color: initial;
+    border-width: 8px 0 8px 8px;
+    right: -7px;
+    transform-origin: center left;
+  }
+
+  &[data-placement^='right'] > .tippy-arrow {
+    left: 0;
+  }
+
+  &[data-placement^='right'] > .tippy-arrow:before {
+    border-right-color: initial;
+    border-width: 8px 8px 8px 0;
+    left: -7px;
+    transform-origin: center right;
+  }
+
+  &[data-inertia][data-state='visible'] {
+    transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+  }
+
+  & > .tippy-arrow {
+    color: #fff;
+    height: 16px;
+    width: 16px;
+    opacity: 0.6;
+
+    &:before {
+      border-color: transparent;
+      border-style: solid;
+      content: '';
+      position: absolute;
+    }
+  }
+
+  & > .tippy-content {
+    padding: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+}

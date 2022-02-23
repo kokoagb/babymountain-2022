@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bm-blocks-partners {
+  .swiper-slide {
+    display: block;
+    position: relative;
+
+    // Aspect-ratio hack for backwards-compatibility
+    // See: https://www.npmjs.com/package/postcss-aspect-ratio-polyfill
+    &::before {
+      float: left;
+      padding-top: 100%;
+      content: '';
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+}

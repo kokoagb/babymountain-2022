@@ -1,0 +1,24 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-bm-blocks-newsletter-signup {
+  font-size: 16px;
+
+  .newsletter-submit {
+    height: 38px;
+    border: none;
+    padding: 0;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: currentcolor none medium;
+
+    &-icon {
+      height: 38px;
+    }
+  }
+}

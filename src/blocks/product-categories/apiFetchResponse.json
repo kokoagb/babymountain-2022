@@ -1,0 +1,59 @@
+[
+  {
+    "id": 20,
+    "name": "Category 1",
+    "slug": "category-1",
+    "description": "",
+    "parent": 0,
+    "count": 1,
+    "image": {
+      "id": 23,
+      "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024.jpg",
+      "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-300x300.jpg",
+      "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-100x100.jpg 100w",
+      "sizes": "(max-width: 1024px) 100vw, 1024px",
+      "name": "DSC_07271024",
+      "alt": ""
+    },
+    "review_count": 0,
+    "permalink": "http:\/\/localhost:8888\/?product_cat=category-1"
+  },
+  {
+    "id": 21,
+    "name": "Category 2",
+    "slug": "category-2",
+    "description": "",
+    "parent": 0,
+    "count": 1,
+    "image": {
+      "id": 22,
+      "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024.jpg",
+      "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-300x300.jpg",
+      "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-100x100.jpg 100w",
+      "sizes": "(max-width: 1024px) 100vw, 1024px",
+      "name": "DSC_07291024",
+      "alt": ""
+    },
+    "review_count": 0,
+    "permalink": "http:\/\/localhost:8888\/?product_cat=category-2"
+  },
+  {
+    "id": 22,
+    "name": "Category 3",
+    "slug": "category-3",
+    "description": "",
+    "parent": 0,
+    "count": 1,
+    "image": {
+      "id": 20,
+      "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795.jpg",
+      "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795-450x450.jpg",
+      "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795-300x233.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795-768x596.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0739795-600x466.jpg 600w",
+      "sizes": "(max-width: 1024px) 100vw, 1024px",
+      "name": "DSC_0739795",
+      "alt": ""
+    },
+    "review_count": 0,
+    "permalink": "http:\/\/localhost:8888\/?product_cat=category-3"
+  }
+]

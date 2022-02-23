@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "bm-blocks/product-categories",
+	"version": "0.1.0",
+	"title": "Termékkategóriák",
+	"category": "babymountain",
+	"icon": "category",
+	"description": "Termékkategóriák blokk",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bm-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {}
+}

@@ -1,0 +1,30 @@
+{
+  "apiVersion": 2,
+  "name": "bm-blocks/button",
+  "version": "0.1.0",
+  "title": "BM Gomb",
+  "category": "babymountain",
+  "icon": "button",
+  "description": "BabyMountain gomb",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bm-blocks",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "aHref": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "default": "primary"
+    },
+    "isWide": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

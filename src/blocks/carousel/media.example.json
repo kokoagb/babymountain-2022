@@ -1,0 +1,121 @@
+{
+  "id": 6,
+  "date": "2021-11-06T16:36:57",
+  "date_gmt": "2021-11-06T16:36:57",
+  "guid": {
+    "rendered": "http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg",
+    "raw": "http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg"
+  },
+  "modified": "2021-11-06T16:36:57",
+  "modified_gmt": "2021-11-06T16:36:57",
+  "slug": "krisztian_kovacs",
+  "status": "inherit",
+  "type": "attachment",
+  "link": "http://localhost:8888/?attachment_id=6",
+  "title": {
+    "raw": "krisztian_kovacs",
+    "rendered": "krisztian_kovacs"
+  },
+  "author": 1,
+  "comment_status": "open",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "permalink_template": "http://localhost:8888/?attachment_id=6",
+  "generated_slug": "krisztian_kovacs",
+  "description": {
+    "raw": "",
+    "rendered": "<p class=\"attachment\"><a href='http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg'><img width=\"200\" height=\"200\" src=\"http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg\" class=\"attachment-medium size-medium\" alt=\"\" loading=\"lazy\" srcset=\"http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg 200w, http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs-150x150.jpeg 150w\" sizes=\"(max-width: 200px) 100vw, 200px\" style=\"width:100%;height:100%;max-width:200px;\" /></a></p>\n"
+  },
+  "caption": {
+    "raw": "",
+    "rendered": ""
+  },
+  "alt_text": "",
+  "media_type": "image",
+  "mime_type": "image/jpeg",
+  "media_details": {
+    "width": 200,
+    "height": 200,
+    "file": "2021/11/krisztian_kovacs.jpeg",
+    "sizes": {
+      "thumbnail": {
+        "file": "krisztian_kovacs-150x150.jpeg",
+        "width": 150,
+        "height": 150,
+        "mime_type": "image/jpeg",
+        "source_url": "http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs-150x150.jpeg"
+      },
+      "full": {
+        "file": "krisztian_kovacs.jpeg",
+        "width": 200,
+        "height": 200,
+        "mime_type": "image/jpeg",
+        "source_url": "http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg"
+      }
+    },
+    "image_meta": {
+      "aperture": "0",
+      "credit": "",
+      "camera": "",
+      "caption": "",
+      "created_timestamp": "0",
+      "copyright": "",
+      "focal_length": "0",
+      "iso": "0",
+      "shutter_speed": "0",
+      "title": "",
+      "orientation": "0",
+      "keywords": []
+    }
+  },
+  "post": 2,
+  "source_url": "http://localhost:8888/wp-content/uploads/2021/11/krisztian_kovacs.jpeg",
+  "missing_image_sizes": [],
+  "_links": {
+    "self": [
+      {
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/media/6"
+      }
+    ],
+    "collection": [
+      {
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/media"
+      }
+    ],
+    "about": [
+      {
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/types/attachment"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "http://localhost:8888/index.php?rest_route=%2Fwp%2Fv2%2Fcomments&post=6"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/media/6"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "http://localhost:8888/index.php?rest_route=/wp/v2/media/6"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

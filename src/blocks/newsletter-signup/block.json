@@ -1,0 +1,21 @@
+{
+  "apiVersion": 2,
+  "name": "bm-blocks/newsletter-signup",
+  "version": "0.1.0",
+  "title": "Hírlevél feliratkozás",
+  "category": "babymountain",
+  "icon": "email-alt",
+  "description": "Hírlevél feliratkozás blokk",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bm-blocks",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "mailchimpId": {
+      "type": "string",
+      "default": "c26705cccb"
+    }
+  }
+}

@@ -1,0 +1,222 @@
+[
+  {
+    "id": 26,
+    "name": "S\u00f3hegyecske 4",
+    "parent": 0,
+    "type": "simple",
+    "variation": "",
+    "permalink": "http:\/\/localhost:8888\/?product=sohegyecske-4",
+    "sku": "",
+    "short_description": "",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
+    "on_sale": false,
+    "prices": {
+      "price": "1000",
+      "regular_price": "1000",
+      "sale_price": "1000",
+      "price_range": null,
+      "currency_code": "HUF",
+      "currency_symbol": "Ft",
+      "currency_minor_unit": 0,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": "",
+      "currency_prefix": "",
+      "currency_suffix": " Ft"
+    },
+    "price_html": "<span class=\"woocommerce-Price-amount amount\">1000&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#070;&#116;<\/span><\/span>",
+    "average_rating": "0",
+    "review_count": 0,
+    "images": [
+      {
+        "id": 15,
+        "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-scaled.jpg",
+        "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-450x450.jpg",
+        "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-scaled.jpg 2560w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-1024x1024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-1536x1536.jpg 1536w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-2048x2048.jpg 2048w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_0729-1-100x100.jpg 100w",
+        "sizes": "(max-width: 2560px) 100vw, 2560px",
+        "name": "DSC_0729-1",
+        "alt": ""
+      }
+    ],
+    "categories": [],
+    "tags": [],
+    "attributes": [],
+    "variations": [],
+    "has_options": false,
+    "is_purchasable": true,
+    "is_in_stock": true,
+    "is_on_backorder": false,
+    "low_stock_remaining": null,
+    "sold_individually": false,
+    "quantity_limit": 99,
+    "add_to_cart": {
+      "text": "Add to cart",
+      "description": "Add &ldquo;S\u00f3hegyecske 4&rdquo; to your cart",
+      "url": "?add-to-cart=26"
+    }
+  },
+  {
+    "id": 25,
+    "name": "S\u00f3hegyecske 3",
+    "parent": 0,
+    "type": "simple",
+    "variation": "",
+    "permalink": "http:\/\/localhost:8888\/?product=sohegyecske-3",
+    "sku": "",
+    "short_description": "",
+    "description": "",
+    "on_sale": false,
+    "prices": {
+      "price": "10000",
+      "regular_price": "10000",
+      "sale_price": "10000",
+      "price_range": null,
+      "currency_code": "HUF",
+      "currency_symbol": "Ft",
+      "currency_minor_unit": 0,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": "",
+      "currency_prefix": "",
+      "currency_suffix": " Ft"
+    },
+    "price_html": "<span class=\"woocommerce-Price-amount amount\">10000&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#070;&#116;<\/span><\/span>",
+    "average_rating": "0",
+    "review_count": 0,
+    "images": [
+      {
+        "id": 18,
+        "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024.jpg",
+        "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-450x450.jpg",
+        "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_08911024-100x100.jpg 100w",
+        "sizes": "(max-width: 1024px) 100vw, 1024px",
+        "name": "DSC_08911024",
+        "alt": ""
+      }
+    ],
+    "categories": [],
+    "tags": [],
+    "attributes": [],
+    "variations": [],
+    "has_options": false,
+    "is_purchasable": true,
+    "is_in_stock": true,
+    "is_on_backorder": false,
+    "low_stock_remaining": null,
+    "sold_individually": false,
+    "quantity_limit": 99,
+    "add_to_cart": {
+      "text": "Add to cart",
+      "description": "Add &ldquo;S\u00f3hegyecske 3&rdquo; to your cart",
+      "url": "?add-to-cart=25"
+    }
+  },
+  {
+    "id": 24,
+    "name": "S\u00f3hegyecske 2",
+    "parent": 0,
+    "type": "simple",
+    "variation": "",
+    "permalink": "http:\/\/localhost:8888\/?product=sohegyecske-2",
+    "sku": "",
+    "short_description": "",
+    "description": "",
+    "on_sale": false,
+    "prices": {
+      "price": "10000",
+      "regular_price": "10000",
+      "sale_price": "10000",
+      "price_range": null,
+      "currency_code": "HUF",
+      "currency_symbol": "Ft",
+      "currency_minor_unit": 0,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": "",
+      "currency_prefix": "",
+      "currency_suffix": " Ft"
+    },
+    "price_html": "<span class=\"woocommerce-Price-amount amount\">10000&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#070;&#116;<\/span><\/span>",
+    "average_rating": "0",
+    "review_count": 0,
+    "images": [
+      {
+        "id": 22,
+        "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024.jpg",
+        "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-450x450.jpg",
+        "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07291024-100x100.jpg 100w",
+        "sizes": "(max-width: 1024px) 100vw, 1024px",
+        "name": "DSC_07291024",
+        "alt": ""
+      }
+    ],
+    "categories": [],
+    "tags": [],
+    "attributes": [],
+    "variations": [],
+    "has_options": false,
+    "is_purchasable": true,
+    "is_in_stock": true,
+    "is_on_backorder": false,
+    "low_stock_remaining": null,
+    "sold_individually": false,
+    "quantity_limit": 99,
+    "add_to_cart": {
+      "text": "Add to cart",
+      "description": "Add &ldquo;S\u00f3hegyecske 2&rdquo; to your cart",
+      "url": "?add-to-cart=24"
+    }
+  },
+  {
+    "id": 14,
+    "name": "S\u00f3hegyecske 1",
+    "parent": 0,
+    "type": "simple",
+    "variation": "",
+    "permalink": "http:\/\/localhost:8888\/?product=sohegyecske-1",
+    "sku": "",
+    "short_description": "",
+    "description": "",
+    "on_sale": false,
+    "prices": {
+      "price": "10000",
+      "regular_price": "10000",
+      "sale_price": "10000",
+      "price_range": null,
+      "currency_code": "HUF",
+      "currency_symbol": "Ft",
+      "currency_minor_unit": 0,
+      "currency_decimal_separator": ",",
+      "currency_thousand_separator": "",
+      "currency_prefix": "",
+      "currency_suffix": " Ft"
+    },
+    "price_html": "<span class=\"woocommerce-Price-amount amount\">10000&nbsp;<span class=\"woocommerce-Price-currencySymbol\">&#070;&#116;<\/span><\/span>",
+    "average_rating": "0",
+    "review_count": 0,
+    "images": [
+      {
+        "id": 23,
+        "src": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024.jpg",
+        "thumbnail": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-450x450.jpg",
+        "srcset": "http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024.jpg 1024w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-300x300.jpg 300w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-150x150.jpg 150w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-768x768.jpg 768w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-450x450.jpg 450w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-600x600.jpg 600w, http:\/\/localhost:8888\/wp-content\/uploads\/2022\/02\/DSC_07271024-100x100.jpg 100w",
+        "sizes": "(max-width: 1024px) 100vw, 1024px",
+        "name": "DSC_07271024",
+        "alt": ""
+      }
+    ],
+    "categories": [],
+    "tags": [],
+    "attributes": [],
+    "variations": [],
+    "has_options": false,
+    "is_purchasable": true,
+    "is_in_stock": true,
+    "is_on_backorder": false,
+    "low_stock_remaining": null,
+    "sold_individually": false,
+    "quantity_limit": 99,
+    "add_to_cart": {
+      "text": "Add to cart",
+      "description": "Add &ldquo;S\u00f3hegyecske 1&rdquo; to your cart",
+      "url": "?add-to-cart=14"
+    }
+  }
+]

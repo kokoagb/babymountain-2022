@@ -1,0 +1,236 @@
+{
+	"apiVersion": 2,
+	"name": "bm-blocks/herbs",
+	"version": "0.1.0",
+	"title": "Gyógynövények",
+	"category": "babymountain",
+	"icon": "image-filter",
+	"description": "Gyógynövények blokk",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bm-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"herbs": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Levendula",
+					"description": "levendula-citromfű-kristálysó keveréke",
+					"position": {
+						"left": 30,
+						"top": 14
+					},
+					"useCases": [
+						"álmatlanság, alvászavar",
+						"nyugtalanság (pocakfájás, fogzás idején)",
+						"feszültség, stressz, depresszió",
+						"megfázás/nátha",
+						"vírusos és bakteriális, fertőző felsőlégúti megbetegedések",
+						"általános immunrendszer erősítés"
+					],
+					"collections": [
+						{
+							"title": "Silent Night - Álomba ringató Sóhegyecske kollekció",
+							"slug": "/silent-night/"
+						},
+						{
+							"title": "Magic Mountain Collection",
+							"slug": "magic-mountain-collection"
+						},
+						{
+							"title": "Rainbow Mountain Collection",
+							"slug": "rainbow-mountain-collection"
+						},
+						{
+							"title": "Black & White Collection",
+							"slug": "black-white-collection"
+						},
+						{
+							"title": "Hello Mommy & Daddy Collection",
+							"slug": "hello-mommy-and-daddy-collection"
+						},
+						{
+							"title": "Mini levendulás Sóhegyecske fülpárnák",
+							"slug": "gyogynovenyes-mini-sohegyecske-fulparnak"
+						}
+					]
+				},
+				{
+					"title": "Kamilla",
+					"description": "kamilla-citromfű-kristálysó keveréke",
+					"position": {
+						"left": 50,
+						"top": 14
+					},
+					"useCases": [
+						"megfázás/nátha",
+						"influenzás tünetek",
+						"köhögés",
+						"vírusos és bakteriális, fertőző felsőlégúti megbetegedések",
+						"allergia (orvosi javaslatra!)",
+						"általános immunrendszer-erősítés"
+					],
+					"collections": [
+						{
+							"title": "Rainbow Mountain Collection",
+							"slug": "rainbow-mountain-collection"
+						},
+						{
+							"title": "Black & White Collection",
+							"slug": "black-white-collection"
+						},
+						{
+							"title": "Hello Mommy & Daddy Collection",
+							"slug": "hello-mommy-and-daddy-collection"
+						},
+						{
+							"title": "Mini kamillás Sóhegyecske fülpárnák",
+							"slug": "gyogynovenyes-mini-sohegyecske-fulparnak"
+						}
+					]
+				},
+				{
+					"title": "Hársfavirág",
+					"description": "hársfavirág –citromfű-kristálysó keveréke",
+					"position": {
+						"left": 11,
+						"top": 45
+					},
+					"useCases": [
+						"megfázás/nátha",
+						"hurutos felsőlégúti megbetegedések (fülgyulladás, torokgyulladás)",
+						"hurutos köhögés",
+						"vírusos és bakteriális, fertőző felsőlégúti megbetegedések",
+						"feszültség, stressz, depresszió",
+						"általános immunrendszer-erősítés"
+					],
+					"collections": [
+						{
+							"title": "Fairy’s Wings Collection",
+							"slug": "fairys-wings-collection"
+						},
+						{
+							"title": "Rainbow Mountain Collection",
+							"slug": "rainbow-mountain-collection"
+						},
+						{
+							"title": "Black&White Collection",
+							"slug": "black-white-collection"
+						},
+						{
+							"title": "Hello Mommy & Daddy Collection",
+							"slug": "hello-mommy-and-daddy-collection"
+						},
+						{
+							"title": "Mini hársfavirágos Sóhegyecske fülpárnák",
+							"slug": "gyogynovenyes-mini-sohegyecske-fulparnak"
+						}
+					]
+				},
+				{
+					"title": "Citromfű",
+					"description": "A csodálatos citromfüvet sópárnáinkban levendulával, kamillával és hársfavirággal is vegyítettük.",
+					"position": {
+						"left": 11,
+						"top": 14
+					},
+					"useCases": [
+						"megfázás/nátha",
+						"vírusos és bakteriális, fertőző felsőlégúti megbetegedések",
+						"allergia (orvosi javaslatra!)",
+						"asztma",
+						"álmatlanság, alvászavar",
+						"feszültség, stressz, depresszió",
+						"fejfájás",
+						"általános immunrendszer erősítés"
+					],
+					"collections": [
+						{
+							"title": "Fairy’s Wings Collection",
+							"slug": "fairys-wings-collection"
+						},
+						{
+							"title": "Rainbow Mountain Collection",
+							"slug": "rainbow-mountain-collection"
+						},
+						{
+							"title": "Black&White Collection",
+							"slug": "black-white-collection"
+						},
+						{
+							"title": "Hello Mommy & Daddy Collection",
+							"slug": "hello-mommy-and-daddy-collection"
+						},
+						{
+							"title": "Mini hársfavirágos Sóhegyecske fülpárnák",
+							"slug": "gyogynovenyes-mini-sohegyecske-fulparnak"
+						}
+					]
+				},
+				{
+					"id": "cirbolyafenyo",
+					"title": "Cirbolyafenyő",
+					"description": "Cirbolyafenyő",
+					"position": {
+						"left": 88,
+						"top": 14
+					},
+					"useCases": [
+						"álmatlanság, alvászavar",
+						"feszültség, stressz, depresszió",
+						"szív- és érrendszeri megbetegedések"
+					],
+					"collections": [
+						{
+							"title": "Silent Night  - Álomba ringató Sóhegyecske kollekció",
+							"slug": "/silent-night/"
+						}
+					]
+				},
+				{
+					"title": "Citromverbéna",
+					"description": "A citromverbéna szárított leveleinek aromája",
+					"position": {
+						"left": 40,
+						"top": 55
+					},
+					"useCases": [
+						"lazító, szorongásoldó hatással rendelkezik",
+						"stresszoldó, kiváló segítséget nyújt az alvászavarok leküzdésében",
+						"fertőtlenítő, baktérium és vírusölő hatásának köszönhetően tisztítja a légutakat és csillapítja a felsőlégúti megbetegedések (orrdugulás, nátha, köhögés) tüneteit"
+					],
+					"collections": [
+						{
+							"title": "Silent Night  - Álomba ringató Sóhegyecske kollekció",
+							"slug": "/silent-night/"
+						}
+					]
+				},
+				{
+					"title": "Édesnarancsvirág",
+					"description": "Az édesnarancsvirág",
+					"position": {
+						"left": 66,
+						"top": 14
+					},
+					"useCases": [
+						"nyugtató hatású",
+						"eloszlatja a haragos indulatokat, a dühöt",
+						"enyhíti a bánatot",
+						"oldja a szorongásos tüneteket."
+					],
+					"collections": [
+						{
+							"title": "Anyák napi kollekció",
+							"slug": "rose-collection"
+						}
+					]
+				}
+			]
+		}
+	}
+}

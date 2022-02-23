@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "bm-blocks/products",
+	"version": "0.1.0",
+	"title": "Termékek",
+	"category": "babymountain",
+	"icon": "products",
+	"description": "Termékek blokk",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bm-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {}
+}

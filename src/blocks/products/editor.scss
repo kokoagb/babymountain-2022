@@ -1,0 +1,12 @@
+.wp-block-bm-blocks-products {
+  display: flex;
+  gap: 1rem;
+
+  &-product {
+    flex: 1;
+
+    &-image {
+      opacity: 1;
+    }
+  }
+}
