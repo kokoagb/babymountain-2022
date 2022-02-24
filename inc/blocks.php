@@ -1,79 +1,55 @@
 <?php
-/**
- * Plugin Name:       BabyMountain Blokkok
- * Description:       BabyMountain Blokkok a WordPress blokkszerkesztőhöz
- * Requires at least: 5.8
- * Requires PHP:      7.0
- * Version:           0.1.0
- * Author:            kokoagb
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       bm-blocks
- *
- * @package           bm-blocks
- */
 
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/writing-your-first-block-type/
- */
-function bm_block_init() {
-	register_block_type( __DIR__ . '/build/blocks/button' );
-	register_block_type( __DIR__ . '/build/blocks/carousel' );
-	register_block_type( __DIR__ . '/build/blocks/herbs' );
-	register_block_type( __DIR__ . '/build/blocks/newsletter-signup' );
-	register_block_type( __DIR__ . '/build/blocks/partners' );
-	register_block_type( __DIR__ . '/build/blocks/testimonials' );
-	register_block_type( __DIR__ . '/build/blocks/products', array(
+function bm_blocks_init() {
+	register_block_type( __DIR__ . '/../build/blocks/button' );
+	register_block_type( __DIR__ . '/../build/blocks/carousel' );
+	register_block_type( __DIR__ . '/../build/blocks/herbs' );
+	register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
+	register_block_type( __DIR__ . '/../build/blocks/partners' );
+	register_block_type( __DIR__ . '/../build/blocks/testimonials' );
+	register_block_type( __DIR__ . '/../build/blocks/products', array(
 		'render_callback' => 'bm_dynamic_block_products'
 	) );
-	register_block_type( __DIR__ . '/build/blocks/product-categories', array(
+	register_block_type( __DIR__ . '/../build/blocks/product-categories', array(
 		'render_callback' => 'bm_dynamic_block_product_categories'
 	) );
 }
-add_action( 'init', 'bm_block_init' );
+add_action( 'init', 'bm_blocks_init' );
 
 function bm_blocks_frontend_scripts() {
 	if ( has_block( 'bm-blocks/carousel' ) || has_block( 'bm-blocks/testimonials' ) ) {
 		wp_enqueue_script(
 			'bm-blocks-swiper',
-      plugins_url( 'build/assets/swiper/index.js', __FILE__ )
+      get_template_directory_uri() . '/build/assets/swiper/index.js'
 		);
 		wp_enqueue_style(
 			'bm-blocks-swiper',
-      plugins_url( 'build/assets/swiper/index.css', __FILE__ )
+      get_template_directory_uri() . '/build/assets/swiper/index.css'
 		);
 	}
 	if ( has_block( 'bm-blocks/newsletter-signup' ) ) {
 		wp_enqueue_script(
 			'bm-blocks-newsletter-signup-validation',
-      plugins_url( 'build/assets/newsletter-signup-validation/index.js', __FILE__ )
+      get_template_directory_uri() . '/build/assets/newsletter-signup-validation/index.js'
 		);
 	}
 	if ( has_block( 'bm-blocks/herbs' ) ) {
 		wp_enqueue_script(
 			'bm-blocks-herbs',
-      plugins_url( 'build/assets/herbs/index.js', __FILE__ )
+      get_template_directory_uri() . '/build/assets/herbs/index.js'
 		);
 		wp_enqueue_style(
 			'bm-blocks-herbs',
-			plugins_url( 'build/assets/herbs/style-index.css', __FILE__ )
+			get_template_directory_uri() . '/build/assets/herbs/style-index.css'
 		);
 	}
-	// wp_enqueue_style(
-	// 	'bm-blocks-css',
-	// 	plugins_url( 'build/assets/bootstrap/style-index.css', __FILE__ )
-	// );
 }
 add_action( 'wp_enqueue_scripts', 'bm_blocks_frontend_scripts' );
 
 function bm_block_editor_assets() {
 	wp_enqueue_style(
 		'bm-block-editor-css',
-		plugins_url( 'build/assets/bootstrap/style-index.css', __FILE__ )
+		get_template_directory_uri() . '/build/assets/bootstrap/style-index.css'
 	);
 }
 
@@ -148,6 +124,14 @@ function bm_dynamic_block_product_categories () {
 	'<script>window.bmCategories = '.json_encode($mapped_categories).'</script>';
 	return $markup;
 }
+
+// Workaround for assets loaded by block.json
+add_filter( 'plugins_url', function ( $url, $path, $plugin ) {
+    if ( strpos( $url, get_template_directory() ) !== false ) {
+        $url = str_replace( 'wp-content/plugins' . ABSPATH, '', $url );
+    }
+    return $url;
+}, 10, 3 );
 
 // function lakewood_print_scripts_styles() {
 // 	if( is_admin() ) {

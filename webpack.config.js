@@ -18,8 +18,8 @@ module.exports = merge(defaultConfig, {
           from: 'src/**/block.json',
           to({ absoluteFilename }) {
             return absoluteFilename.replace(
-              '/bm-blocks/src/',
-              '/bm-blocks/build/'
+              '/babymountain-2022/src/',
+              '/babymountain-2022/build/'
             );
           },
         },

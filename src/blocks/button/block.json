@@ -13,10 +13,12 @@
   "editorScript": "file:./index.js",
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "aHref": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "type": {
       "type": "string",
