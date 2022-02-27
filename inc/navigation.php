@@ -38,7 +38,7 @@ function bm_footer_menu() {
     'theme_location'    => 'footer',
     'depth'             => 1,
     'container'         => false,
-    'menu_class'        => 'd-flex m-0 list-unstyled gap-3'
+    'menu_class'        => 'd-flex flex-column flex-xl-row f m-0 list-unstyled gap-3'
   ));
 }
 

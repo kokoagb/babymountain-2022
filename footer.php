@@ -15,9 +15,9 @@
 		<img class="site-footer-logo" src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" loading="lazy">
 	</div>
 	<nav class="p-2">
-		<div class="container d-flex">
+		<div class="container d-flex flex-column flex-xl-row">
 			<?php bm_footer_menu(); ?>
-			<strong class="ms-auto">
+			<strong class="ms-xl-auto mt-3 mt-xl-0">
 				BabyMountain ©2022
 			</strong>
 		</div>
