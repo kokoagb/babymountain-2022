@@ -46,12 +46,11 @@ function bm_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'bm' ),
-		)
-	);
+	register_nav_menus( array(
+    'primary' => __( 'Főmenü', 'bm' ),
+    'session' => __( 'Fiókmenü', 'bm' ),
+    'footer'  => __( 'Lábléc', 'bm' )
+  ) );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -88,10 +87,10 @@ add_action( 'after_setup_theme', 'bm_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function bm_scripts() {
-	wp_enqueue_style( 'bm-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'bm-style', get_template_directory_uri(). '/build/assets/main/public.css', array(), _S_VERSION );
 	wp_style_add_data( 'bm-style', 'rtl', 'replace' );
 
-	// wp_enqueue_script( 'bm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bm-navigation', get_template_directory_uri() . '/build/assets/main/index.js', array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'bm_scripts' );
 
@@ -109,4 +108,14 @@ require get_template_directory() . '/inc/template-functions.php';
  * Register custom blocks
  */
 require get_template_directory() . '/inc/blocks.php';
+
+/**
+ * Bootstrap nav walker
+ */
+require get_template_directory() . '/inc/bootstrap_nav_walker.php';
+
+/**
+ * Navigation
+ */
+require get_template_directory() . '/inc/navigation.php';
 

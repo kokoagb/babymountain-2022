@@ -1,0 +1,20 @@
+{
+  "apiVersion": 2,
+  "name": "bm-blocks/container",
+  "version": "0.1.0",
+  "title": "BS Konténer",
+  "category": "bootstrap",
+  "icon": "grid-view",
+  "description": "Bootstrap konténer",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bm-blocks",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

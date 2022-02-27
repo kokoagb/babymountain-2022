@@ -1,0 +1,14 @@
+{
+  "apiVersion": 2,
+  "name": "bm-blocks/col",
+  "version": "0.1.0",
+  "title": "BS Oszlop",
+  "category": "bootstrap",
+  "icon": "grid-view",
+  "description": "Bootstrap oszlop",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bm-blocks",
+  "editorScript": "file:./index.js"
+}

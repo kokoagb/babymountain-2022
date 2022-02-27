@@ -1,0 +1,67 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '~bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+
+$primary: #7d7e7e;
+
+$input-border-radius: 0px;
+$input-focus-border-color: #a7a7a7;
+$input-focus-box-shadow: 0 0 0 0.2rem rgb(14 14 14 / 25%);
+
+$btn-border-radius: 0px;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+
+$theme-colors: map-remove($theme-colors, 'info', 'light', 'dark');
+
+// 4. Include any optional Bootstrap components as you like
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/containers';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/helpers';
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import '~bootstrap/scss/utilities/api';
+
+// 6. Custom styles
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}

@@ -1,11 +1,15 @@
 <?php
 
 function bm_blocks_init() {
+	// Bootstrap blocks
+	register_block_type( __DIR__ . '/../build/blocks/container' );
+	register_block_type( __DIR__ . '/../build/blocks/row' );
+	register_block_type( __DIR__ . '/../build/blocks/col' );
+
+	// BabyMountain blocks
 	register_block_type( __DIR__ . '/../build/blocks/button' );
 	register_block_type( __DIR__ . '/../build/blocks/carousel' );
-	register_block_type( __DIR__ . '/../build/blocks/herbs' );
 	register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
-	register_block_type( __DIR__ . '/../build/blocks/partners' );
 	register_block_type( __DIR__ . '/../build/blocks/testimonials' );
 	register_block_type( __DIR__ . '/../build/blocks/products', array(
 		'render_callback' => 'bm_dynamic_block_products'
@@ -40,7 +44,7 @@ function bm_blocks_frontend_scripts() {
 		);
 		wp_enqueue_style(
 			'bm-blocks-herbs',
-			get_template_directory_uri() . '/build/assets/herbs/style-index.css'
+			get_template_directory_uri() . '/build/assets/herbs/public.css'
 		);
 	}
 }
@@ -49,7 +53,7 @@ add_action( 'wp_enqueue_scripts', 'bm_blocks_frontend_scripts' );
 function bm_block_editor_assets() {
 	wp_enqueue_style(
 		'bm-block-editor-css',
-		get_template_directory_uri() . '/build/assets/bootstrap/style-index.css'
+		get_template_directory_uri() . '/build/assets/main/index.css'
 	);
 }
 
@@ -57,7 +61,7 @@ add_action( 'enqueue_block_editor_assets', 'bm_block_editor_assets' );
 
 function bm_block_category( $categories ) {
 	$category_slugs = wp_list_pluck( $categories, 'slug' );
-	return in_array( 'babymountain', $category_slugs, true ) ? $categories : array_merge(
+	$categories = in_array( 'babymountain', $category_slugs, true ) ? $categories : array_merge(
 		array(
 				array(
 						'slug'  => 'babymountain',
@@ -67,6 +71,17 @@ function bm_block_category( $categories ) {
 			),
 			$categories,
 	);
+	$categories = in_array( 'bootstrap', $category_slugs, true ) ? $categories : array_merge(
+		array(
+				array(
+						'slug'  => 'bootstrap',
+						'title' => 'Bootstrap',
+						'icon'  => null,
+				),
+			),
+			$categories,
+	);
+	return $categories;
 }
 add_filter( 'block_categories_all', 'bm_block_category' );
 

@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "bm-blocks/row",
+  "version": "0.1.0",
+  "title": "BS Sor",
+  "category": "bootstrap",
+  "icon": "grid-view",
+  "description": "Bootstrap sor",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bm-blocks",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}

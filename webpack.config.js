@@ -31,7 +31,7 @@ module.exports = merge(defaultConfig, {
       cacheGroups: {
         style: {
           name(module, chunks) {
-            return `${chunks[0].name.replace('/index', '')}/style-index`;
+            return `${chunks[0].name.replace('/index', '')}/public`;
           },
         },
       },

@@ -11,7 +11,7 @@
   },
   "textdomain": "bm-blocks",
   "editorScript": "file:./index.js",
-  "style": "file:./style-index.css",
+  "style": "file:./public.css",
   "attributes": {
     "mailchimpId": {
       "type": "string",
