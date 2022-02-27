@@ -9,6 +9,8 @@
  * @package bm
  */
 
+ $is_landing = strpos(get_page_template_slug(), 'landing') !== false;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -26,6 +28,7 @@
 
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bm' ); ?></a>
 
+<?php if ( !$is_landing ): ?>
 <header id="masthead" class="site-header d-none d-xl-block">
 	<div class="d-flex align-items-center px-3 pt-4 pb-5">
 		<div class="site-header-social-icons d-inline-flex gap-2">
@@ -81,3 +84,4 @@
 
 
 <img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.png" alt="Rét" loading="lazy" class="header-herbs mb-5" />
+<?php endif; ?>
