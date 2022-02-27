@@ -34,7 +34,7 @@
 
 <nav id="bm-main-nav" class="navbar navbar-light navbar-expand-xl sticky-top bg-white py-xl-0">
 	<div class="container bg-white">
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bm-main-menu" aria-controls="bm-main-menu" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bm-main-menu" aria-controls="bm-main-menu" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -42,8 +42,13 @@
 			<img src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" alt="BabyMountain Logó">
 		</a>
 
-		<div class="collapse navbar-collapse" id="bm-main-menu">
-			<?php bm_header_menu(); ?>
+		<div class="offcanvas offcanvas-bottom" tabindex="-1" id="bm-main-menu" aria-labelledby="bm-main-menu-label">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+			<div class="offcanvas-body">
+				<?php bm_header_menu(); ?>
+			</div>
 		</div>
 	</div>
 </nav><!-- #site-navigation -->

@@ -11,6 +11,8 @@ $input-focus-box-shadow: 0 0 0 0.2rem rgb(14 14 14 / 25%);
 
 $btn-border-radius: 0px;
 
+$offcanvas-vertical-height: 40vh;
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
@@ -28,9 +30,11 @@ $theme-colors: map-remove($theme-colors, 'info', 'light', 'dark');
 @import '~bootstrap/scss/nav';
 @import '~bootstrap/scss/navbar';
 @import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/offcanvas';
 @import '~bootstrap/scss/dropdown';
 @import '~bootstrap/scss/buttons';
 @import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/close';
 @import '~bootstrap/scss/helpers';
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
