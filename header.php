@@ -34,7 +34,7 @@
 
 <nav id="bm-main-nav" class="navbar navbar-light navbar-expand-xl sticky-top bg-white py-xl-0">
 	<div class="container bg-white">
-		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bm-main-menu" aria-controls="bm-main-menu" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler border-0 ps-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#bm-main-menu" aria-controls="bm-main-menu" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -43,11 +43,10 @@
 		</a>
 
 		<div class="offcanvas offcanvas-bottom" tabindex="-1" id="bm-main-menu" aria-labelledby="bm-main-menu-label">
-      <div class="offcanvas-header">
-        <button type="button" class="btn-close text-reset ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
+      <button type="button" class="btn-close text-reset position-absolute top-0 end-0 p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			<div class="offcanvas-body">
 				<?php bm_header_menu(); ?>
+				<?php bm_session_menu_mobile(); ?>
 			</div>
 		</div>
 	</div>

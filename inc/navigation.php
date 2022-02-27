@@ -28,7 +28,7 @@ function bm_session_menu_mobile() {
     'theme_location'    => 'session',
     'depth'             => 1,
     'container'         => false,
-    'menu_class'        => 'navbar-nav',
+    'menu_class'        => 'navbar-nav d-flex d-xl-none',
     'walker'			      => new WP_Bootstrap_Navwalker()
   ));
 }
