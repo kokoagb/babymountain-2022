@@ -12,6 +12,7 @@
     display: block;
 
     &-image {
+      width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
       opacity: 0;

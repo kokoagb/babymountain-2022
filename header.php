@@ -45,7 +45,10 @@
 		<?php bm_session_menu(); ?>
 		<ul class="d-flex align-items-center list-unstyled m-0 ms-3 gap-3">
 			<li>
-				<input type="search" class="form-control form-control-sm" placeholder="Keresés...">
+				<form action="<?php echo get_site_url(); ?>" method="get">
+					<input type="search" name="s" class="form-control form-control-sm" placeholder="Keresés...">
+					<input type="hidden" name="post_type" value="product" />
+				</form>
 			</li>
 			<li>
 				<?php bm_cart_link(); ?>
@@ -78,6 +81,3 @@
 
 
 <img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.png" alt="Rét" loading="lazy" class="header-herbs" />
-
-
-<div id="page" class="site">

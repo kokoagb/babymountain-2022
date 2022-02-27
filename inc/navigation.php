@@ -32,6 +32,16 @@ function bm_session_menu_mobile() {
   ));
 }
 
+function bm_footer_menu() {
+  wp_nav_menu(array(
+    'menu'              => 'footer',
+    'theme_location'    => 'footer',
+    'depth'             => 1,
+    'container'         => false,
+    'menu_class'        => 'd-flex m-0 list-unstyled gap-3'
+  ));
+}
+
 function bm_menu_item_class($classes, $item, $args) {
     if(isset($args->menu_item_class)) {
         $classes[] = $args->menu_item_class;

@@ -2,8 +2,6 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package bm
@@ -11,22 +9,20 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bm' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bm' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bm' ), 'bm', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="site-footer">
+	<div class="site-footer-inner position-relative" aria-hidden="true">
+		<img class="site-footer-background img-fluid" src="<?php echo get_template_directory_uri(); ?>/static/images/footer.jpg" loading="lazy">
+		<img class="site-footer-logo" src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" loading="lazy">
+	</div>
+	<nav class="p-2">
+		<div class="container d-flex">
+			<?php bm_footer_menu(); ?>
+			<strong class="ms-auto">
+				BabyMountain ©2022
+			</strong>
+		</div>
+</nav>
+</footer>
 
 <?php wp_footer(); ?>
 

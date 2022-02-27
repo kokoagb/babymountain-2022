@@ -49,7 +49,7 @@ function bm_setup() {
 	register_nav_menus( array(
     'primary' => __( 'Főmenü', 'bm' ),
     'session' => __( 'Fiókmenü', 'bm' ),
-    'footer'  => __( 'Lábléc', 'bm' )
+    'footer'  => __( 'Láblécmenü', 'bm' )
   ) );
 
 	/*

@@ -1,0 +1,10 @@
+.site-footer {
+  &-logo {
+    position: absolute;
+    width: 15vw;
+    height: auto;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
