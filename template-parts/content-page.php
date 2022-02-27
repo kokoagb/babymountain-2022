@@ -7,16 +7,24 @@
  * @package bm
  */
 
+  $defaults = array(
+    'is_fullwidth' => false,
+		'no_title' => false,
+	);
+
+  $args = wp_parse_args( $args, $defaults );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header container">
+	<?php if (!$args['no_title']): ?>
+	<header class="entry-header <?php echo $args['is_fullwidth'] ? 'container-fluid' : 'container' ?>">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	<?php bm_post_thumbnail(); ?>
 
-	<div class="entry-content container">
+	<div class="entry-content <?php echo $args['is_fullwidth'] ? 'container-fluid' : 'container' ?>">
 		<?php
 		the_content();
 

@@ -80,4 +80,4 @@
 </nav><!-- #site-navigation -->
 
 
-<img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.png" alt="Rét" loading="lazy" class="header-herbs" />
+<img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.png" alt="Rét" loading="lazy" class="header-herbs mb-5" />
