@@ -17,8 +17,7 @@ function bm_session_menu() {
     'theme_location'    => 'session',
     'depth'             => 1,
     'container'         => false,
-    'menu_class'        => 'd-flex p-0 m-0 ms-auto list-unstyled',
-    'menu_item_class'   => 'ms-3'
+    'menu_class'        => 'd-flex m-0 ms-auto list-unstyled gap-3',
   ));
 }
 

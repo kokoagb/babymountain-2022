@@ -119,3 +119,8 @@ require get_template_directory() . '/inc/bootstrap_nav_walker.php';
  */
 require get_template_directory() . '/inc/navigation.php';
 
+/**
+ * Icons
+ */
+require get_template_directory() . '/inc/icons.php';
+
