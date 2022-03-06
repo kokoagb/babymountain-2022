@@ -1,0 +1,28 @@
+.header-herbs {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: -2rem;
+  }
+}
+
+.site-header-social-icons {
+  svg {
+    width: auto;
+    height: 32px;
+  }
+}
+
+.bm-cart-link {
+  &:hover &-icon {
+    transform: rotate(-8deg);
+  }
+
+  &-icon {
+    height: 32px !important;
+    width: auto;
+    transition: transform 0.2s;
+  }
+}

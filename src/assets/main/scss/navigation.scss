@@ -60,7 +60,7 @@
 
     & > .menu-item.active > a,
     & > .menu-item:hover > a {
-      border-bottom-color: #808080;
+      border-bottom-color: $primary;
     }
 
     .dropdown-menu {
@@ -73,7 +73,7 @@
 
       .dropdown-item:hover {
         color: white;
-        background-color: #808080;
+        background-color: $primary;
       }
     }
 

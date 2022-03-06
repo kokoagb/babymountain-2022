@@ -1,0 +1,6 @@
+@include media-breakpoint-down(xl) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

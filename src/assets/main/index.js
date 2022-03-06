@@ -1,7 +1,7 @@
 import 'bootstrap/js/dist/collapse';
 import 'bootstrap/js/dist/offcanvas';
 import 'bootstrap/js/dist/dropdown';
-import './email-subscription';
-import './sticky-nav';
-import './style.scss';
-import './editor.scss';
+import './js/email-subscription';
+import './js/sticky-nav';
+import './scss/style.scss';
+import './scss/editor.scss';

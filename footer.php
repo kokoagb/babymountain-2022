@@ -9,7 +9,7 @@
 
 ?>
 
-<footer class="site-footer">
+<footer class="site-footer mt-5">
 	<form
 		name="mc-embedded-subscribe-form"
 		action="https://babymountain.us6.list-manage.com/subscribe/post?u=8c60bf97301e09f33b4d8dca3&amp;id=c26705cccb"
