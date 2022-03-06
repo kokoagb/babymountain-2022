@@ -68,6 +68,11 @@ function bm_setup() {
 			'script',
 		)
 	);
+
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', 'bm_setup' );
 
@@ -123,4 +128,9 @@ require get_template_directory() . '/inc/navigation.php';
  * Icons
  */
 require get_template_directory() . '/inc/icons.php';
+
+/**
+ * Woocommerce
+ */
+require get_template_directory() . '/inc/woocommerce.php';
 

@@ -7,4 +7,20 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  &-inner {
+    margin-top: -6vw;
+  }
+
+  .email-subscription {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 12px;
+    z-index: 1;
+
+    &-image {
+      max-width: 7rem;
+    }
+  }
 }

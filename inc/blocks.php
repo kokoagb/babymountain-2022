@@ -9,7 +9,7 @@ function bm_blocks_init() {
 	// BabyMountain blocks
 	register_block_type( __DIR__ . '/../build/blocks/button' );
 	register_block_type( __DIR__ . '/../build/blocks/carousel' );
-	register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
+	// register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
 	register_block_type( __DIR__ . '/../build/blocks/testimonials' );
 	register_block_type( __DIR__ . '/../build/blocks/products', array(
 		'render_callback' => 'bm_dynamic_block_products'
@@ -31,12 +31,12 @@ function bm_blocks_frontend_scripts() {
       get_template_directory_uri() . '/build/assets/swiper/index.css'
 		);
 	}
-	if ( has_block( 'bm-blocks/newsletter-signup' ) ) {
-		wp_enqueue_script(
-			'bm-blocks-newsletter-signup-validation',
-      get_template_directory_uri() . '/build/assets/newsletter-signup-validation/index.js'
-		);
-	}
+	// if ( has_block( 'bm-blocks/newsletter-signup' ) ) {
+	// 	wp_enqueue_script(
+	// 		'bm-blocks-newsletter-signup-validation',
+  //     get_template_directory_uri() . '/build/assets/newsletter-signup-validation/index.js'
+	// 	);
+	// }
 	if ( has_block( 'bm-blocks/herbs' ) ) {
 		wp_enqueue_script(
 			'bm-blocks-herbs',
