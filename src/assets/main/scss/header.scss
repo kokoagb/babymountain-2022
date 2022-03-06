@@ -16,6 +16,9 @@
 }
 
 .bm-cart-link {
+  display: block;
+  position: relative;
+
   &:hover &-icon {
     transform: rotate(-8deg);
   }
@@ -24,5 +27,21 @@
     height: 32px !important;
     width: auto;
     transition: transform 0.2s;
+  }
+
+  &-count {
+    display: flex;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: white;
+    font-size: 0.7rem;
+    text-decoration: none;
+    background-color: #bdccc2;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
   }
 }

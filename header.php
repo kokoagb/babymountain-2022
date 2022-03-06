@@ -70,7 +70,9 @@
 			<img src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" alt="BabyMountain Logó" loading="lazy" />
 		</a>
 
-		<?php bm_cart_link('d-xl-none'); ?>
+		<span class="d-xl-none">
+			<?php bm_cart_link(); ?>
+		</span>
 
 		<div class="offcanvas offcanvas-bottom" tabindex="-1" id="bm-main-menu" aria-labelledby="bm-main-menu-label">
       <button type="button" class="btn-close text-reset position-absolute top-0 end-0 p-3 d-block d-xl-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>

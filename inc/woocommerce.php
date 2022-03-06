@@ -90,3 +90,16 @@ function bm_shop_loop_item_wrapper_end () {
   echo '<div class="bm-product-loop-cta">TOVÁBB A TERMÉKRE</div></div>';
 }
 add_action('woocommerce_before_shop_loop_item_title', 'bm_shop_loop_item_wrapper_end', 11);
+
+function bm_cart_count_fragments( $fragments ) {
+  $item_count = WC()->cart->get_cart_contents_count();
+
+  ob_start();
+  bm_cart_link('', $item_count);
+  $cart_link = ob_get_contents();
+  ob_end_clean();
+
+  $fragments['.bm-cart-link'] = $cart_link;
+  return $fragments;
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'bm_cart_count_fragments', 10, 1 );
