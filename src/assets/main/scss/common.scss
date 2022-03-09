@@ -34,28 +34,3 @@ $spacers: map-merge(
     9: $spacer * 7,
   )
 );
-
-// 4. Include any optional Bootstrap components as you like
-@import '~bootstrap/scss/utilities';
-@import '~bootstrap/scss/reboot';
-@import '~bootstrap/scss/type';
-@import '~bootstrap/scss/images';
-@import '~bootstrap/scss/containers';
-@import '~bootstrap/scss/grid';
-@import '~bootstrap/scss/nav';
-@import '~bootstrap/scss/navbar';
-@import '~bootstrap/scss/transitions';
-@import '~bootstrap/scss/offcanvas';
-@import '~bootstrap/scss/dropdown';
-@import '~bootstrap/scss/buttons';
-@import '~bootstrap/scss/forms';
-@import '~bootstrap/scss/close';
-@import '~bootstrap/scss/helpers';
-
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-@import '~bootstrap/scss/utilities/api';
-
-// 6. Custom styles
-
-/* Alignments
---------------------------------------------- */

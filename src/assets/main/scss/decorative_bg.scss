@@ -1,0 +1,34 @@
+.bm-decorative-bg {
+  position: relative;
+
+  &::before {
+    content: url('/wp-content/themes/babymountain-2022/static/images/decorative_bg.jpg');
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+  }
+
+  &-title {
+    &::before {
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-center {
+    &::before {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-bottom {
+    &::before {
+      top: unset;
+      bottom: 0;
+    }
+  }
+}

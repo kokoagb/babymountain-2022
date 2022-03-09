@@ -1,0 +1,108 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * hero-new:
+ *   - http://typekit.com/eulas/00000000000000003b9af1d7
+ *   - http://typekit.com/eulas/00000000000000003b9af1da
+ * novecento-sans:
+ *   - http://typekit.com/eulas/00000000000000007735ccfe
+ *   - http://typekit.com/eulas/00000000000000007735cd06
+ *   - http://typekit.com/eulas/00000000000000007735cd10
+ * novecento-sans-condensed:
+ *   - http://typekit.com/eulas/00000000000000007735cd04
+ *   - http://typekit.com/eulas/00000000000000007735cd11
+ * novecento-sans-narrow:
+ *   - http://typekit.com/eulas/00000000000000007735cd05
+ *   - http://typekit.com/eulas/00000000000000007735cd12
+ * novecento-sans-wide:
+ *   - http://typekit.com/eulas/00000000000000007735cd07
+ *   - http://typekit.com/eulas/00000000000000007735cd14
+ *
+ * © 2009-2022 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2022-01-25 12:08:39 UTC"}*/
+
+@import url('https://p.typekit.net/p.css?s=1&k=iuw0bpm&ht=tk&f=32861.32864.42886.42889.42894.42897.42900.42902.42905.42910.42913&a=79798463&app=typekit&e=css');
+
+@font-face {
+  font-family: 'hero-new';
+  src: url('https://use.typekit.net/af/f6ef0c/00000000000000003b9af1d7/27/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n3&v=3')
+    format('woff2');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'hero-new';
+  src: url('https://use.typekit.net/af/ab749c/00000000000000003b9af1da/27/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n5&v=3')
+    format('woff2');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'novecento-sans';
+  src: url('https://use.typekit.net/af/b4581b/00000000000000007735ccfe/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3')
+    format('woff2');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'novecento-sans';
+  src: url('https://use.typekit.net/af/6477ff/00000000000000007735cd06/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+    format('woff2');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'novecento-sans';
+  src: url('https://use.typekit.net/af/92d6d6/00000000000000007735cd10/30/l?subset_id=2&fvd=n7&v=3')
+    format('woff2');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+.tk-hero-new {
+  font-family: 'hero-new', sans-serif;
+}
+.tk-novecento-sans-condensed {
+  font-family: 'novecento-sans-condensed', sans-serif;
+}
+.tk-novecento-sans-narrow {
+  font-family: 'novecento-sans-narrow', sans-serif;
+}
+.tk-novecento-sans {
+  font-family: 'novecento-sans', sans-serif;
+}
+.tk-novecento-sans-wide {
+  font-family: 'novecento-sans-wide', sans-serif;
+}
+
+body {
+  font-family: 'hero-new-hairline', sans-serif;
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'hero-new', sans-serif;
+}

@@ -7,9 +7,13 @@ import 'swiper/scss/virtual';
 
 window.addEventListener('DOMContentLoaded', () => {
   new Swiper('.wp-block-bm-blocks-carousel', {
-    loop: true,
-    autoplay: true,
     modules: [Autoplay, Lazy, Navigation],
+    loop: true,
+    autoplay: {
+      enabled: true,
+      delay: 4000,
+      pauseOnMouseEnter: true,
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -21,9 +25,13 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   new Swiper('.wp-block-bm-blocks-testimonials .swiper', {
-    loop: true,
-    autoplay: true,
     modules: [Autoplay, Lazy, Navigation],
+    loop: true,
+    autoplay: {
+      enabled: true,
+      delay: 6000,
+      pauseOnMouseEnter: true,
+    },
     navigation: {
       nextEl: document.querySelector(
         '.wp-block-bm-blocks-testimonials-swiper-button-next'
@@ -48,25 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  new Swiper('.wp-block-bm-blocks-partners', {
-    loop: true,
-    autoplay: true,
-    modules: [Autoplay, Lazy],
-    preloadImages: false,
-    lazy: {
-      checkInView: true,
-    },
-    slidesPerView: 3,
-    spaceBetween: 30,
-    breakpoints: {
-      768: {
-        slidesPerView: 5,
-      },
-    },
-  });
-
   new Swiper('.wp-block-bm-blocks-products .swiper', {
-    autoplay: true,
+    modules: [Lazy, Navigation, Virtual],
     virtual: {
       enabled: true,
       slides: window.bmProducts ?? [],
@@ -85,7 +76,6 @@ window.addEventListener('DOMContentLoaded', () => {
         `;
       },
     },
-    modules: [Autoplay, Lazy, Navigation, Virtual],
     navigation: {
       nextEl: document.querySelector(
         '.wp-block-bm-blocks-products-swiper-button-next'
@@ -117,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   new Swiper('.wp-block-bm-blocks-product-categories .swiper', {
-    // autoplay: true,
+    modules: [Lazy, Navigation, Virtual],
     virtual: {
       enabled: true,
       slides: window.bmCategories ?? [],
@@ -130,7 +120,6 @@ window.addEventListener('DOMContentLoaded', () => {
         `;
       },
     },
-    modules: [Autoplay, Lazy, Navigation, Virtual],
     navigation: {
       nextEl: document.querySelector(
         '.wp-block-bm-blocks-product-categories-swiper-button-next'

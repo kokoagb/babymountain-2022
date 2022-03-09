@@ -85,5 +85,5 @@
 </nav><!-- #site-navigation -->
 
 
-<img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.png" alt="Rét" loading="lazy" class="header-herbs mb-5" />
+<img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.jpg" alt="Rét" loading="lazy" class="header-herbs mb-5" />
 <?php endif; ?>

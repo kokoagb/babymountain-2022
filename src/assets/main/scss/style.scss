@@ -1,4 +1,4 @@
-@import './common.scss';
+@import './common';
 
 // Boostrap components
 @import '~bootstrap/scss/utilities';
@@ -21,11 +21,16 @@
 @import '~bootstrap/scss/utilities/api';
 
 // Custom styles
-@import './alignment.scss';
-@import './header.scss';
-@import './footer.scss';
-@import './navigation.scss';
-@import './misc.scss';
+@import './fonts';
+@import './wordpress';
+@import './alignment';
+@import './header';
+@import './footer';
+@import './navigation';
+@import './forms';
+@import './icons';
+@import './decorative_bg';
+@import './misc';
 
 // WooCommerce overrides
-@import './woocommerce.scss';
+@import './woocommerce';

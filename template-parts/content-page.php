@@ -38,7 +38,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer <?php echo $args['is_fullwidth'] ? 'container-fluid' : 'container' ?>">
 			<?php
 			edit_post_link(
 				sprintf(

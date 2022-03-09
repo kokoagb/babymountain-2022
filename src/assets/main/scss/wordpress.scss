@@ -1,0 +1,17 @@
+.post-navigation,
+.posts-navigation {
+  @extend .container;
+  @extend .mt-5;
+
+  .nav-links {
+    @extend .clearfix;
+
+    .nav-previous {
+      float: left;
+    }
+
+    .nav-next {
+      float: right;
+    }
+  }
+}

@@ -26,6 +26,25 @@ module.exports = merge(defaultConfig, {
       ],
     }),
   ],
+  module: {
+    ...defaultConfig.module,
+    rules: defaultConfig.module.rules.map((rule) => {
+      if (
+        [String(/\.css$/), String(/\.(sc|sa)ss$/)].includes(String(rule.test))
+      ) {
+        return {
+          ...rule,
+          use: rule.use.map((loaderConf) => {
+            if (loaderConf.loader.includes('/css-loader/')) {
+              loaderConf.options.url = false;
+            }
+            return loaderConf;
+          }),
+        };
+      }
+      return rule;
+    }),
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {

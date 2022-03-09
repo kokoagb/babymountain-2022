@@ -41,7 +41,10 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation(array(
+				'prev_text' => bm_get_chevron_left() . ' Régebbi bejegyzések',
+				'next_text' => 'Újabb bejegyzések ' . bm_get_chevron_right()
+			));
 
 		else :
 
