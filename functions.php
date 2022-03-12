@@ -4,12 +4,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package bm
+ * @package BabyMoutain
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'BM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'BM_VERSION', '1.0.0' );
 }
 
 /**
@@ -20,13 +20,6 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function bm_setup() {
-	/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on bm, use a find and replace
-		* to change 'bm' to the name of your theme in all the template files.
-		*/
-	load_theme_textdomain( 'bm', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -93,16 +86,16 @@ add_action( 'after_setup_theme', 'bm_content_width', 0 );
  */
 function bm_scripts() {
 	// Styles
-	wp_enqueue_style( 'bm-style', get_template_directory_uri(). '/build/assets/main/public.css', array(), _S_VERSION );
+	wp_enqueue_style( 'bm-style', get_template_directory_uri(). '/build/assets/main/public.css', array(), BM_VERSION );
 	wp_style_add_data( 'bm-style', 'rtl', 'replace' );
 
 	// Conditional styles
 	if ( is_product_category() ) {
-		wp_enqueue_style( 'soft_whisperings', get_template_directory_uri(). '/static/fonts/soft_whisperings.css', array(), _S_VERSION );
+		wp_enqueue_style( 'soft_whisperings', get_template_directory_uri(). '/static/fonts/soft_whisperings.css', array(), BM_VERSION );
 	}
 
 	// Scripts
-	wp_enqueue_script( 'bm-navigation', get_template_directory_uri() . '/build/assets/main/index.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bm-navigation', get_template_directory_uri() . '/build/assets/main/index.js', array(), BM_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'bm_scripts' );
 
@@ -140,4 +133,9 @@ require get_template_directory() . '/inc/icons.php';
  * Woocommerce
  */
 require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Translations
+ */
+require get_template_directory() . '/inc/translations.php';
 

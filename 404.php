@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package bm
+ * @package BabyMoutain
  */
 
 get_header();
@@ -14,31 +14,12 @@ get_header();
 
 		<section class="error-404 not-found">
 			<header class="page-header container">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bm' ); ?></h1>
+				<h1 class="page-title">Ez az oldal nem található</h1>
 			</header><!-- .page-header -->
 
 			<div class="page-content container">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bm' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bm' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
+				<p>Sajnos nem sikerült megtalálnunk a keresett oldalt, de itt láthatod legnépszerűbb termékeinket:</p>
+				<?php echo do_shortcode('[products limit="4" columns="4" orderby="popularity" ]') ?>
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 

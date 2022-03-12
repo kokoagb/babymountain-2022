@@ -103,3 +103,61 @@ function bm_cart_count_fragments( $fragments ) {
   return $fragments;
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'bm_cart_count_fragments', 10, 1 );
+
+function bm_shipping_labels( $label, $method ) {
+  if (strstr($label, 'Személyes átvétel')) {
+    $label .= ' <small>(9462 Völcsej, Fő utca 37. cím alatt, előzetes egyeztetés után)</small>';
+  }
+
+  return $label;
+}
+add_filter('woocommerce_cart_shipping_method_full_label', 'bm_shipping_labels', 10, 2);
+
+function bm_cart_disclaimer() {
+  echo '<p class="text-justify mb-3">Kérjük, fusd át még egyszer figyelmesen a megrendelni kívánt termékek listáját, a hozzájuk tartozó képeket, darabszámot és egyéb leírásokat, majd töltsd ki a megrendeléshez kapcsolódó űrlapot. Megrendelésedet még ebben a fázisban módosíthatod.</p>';
+}
+add_action('woocommerce_before_cart', 'bm_cart_disclaimer', 10, 0);
+
+function bm_thankyou_bacs( $order_number ) {
+  echo '<p>Kérünk, a <strong>rendelésszámot (' . $order_number . ') és a nevedet</strong>&nbsp;az átutalás/befizetés <strong>“Megjegyzés”</strong> rovatában <strong>tüntesd fel!</strong></p>' .
+  '<p>A kiszállítás csak az után lehetséges, miután a teljes vételár összege megérkezett a kedvezményezett bankszámlaszámára.</p>';
+}
+add_action( 'woocommerce_thankyou_bacs', 'bm_thankyou_bacs', 100, 1 );
+
+function bm_exclude_product_categories( $q ) {
+
+  $tax_query = (array) $q->get( 'tax_query' );
+
+  $tax_query[] = array(
+    'taxonomy' => 'product_cat',
+    'field' => 'slug',
+    'terms' => array( 'winter-spirit' ),
+    'operator' => 'NOT IN'
+  );
+
+
+  $q->set( 'tax_query', $tax_query );
+
+}
+add_action( 'woocommerce_product_query', 'bm_exclude_product_categories' );
+
+function bm_product_stock() {
+  global $product;
+
+  $availability = $product->get_availability();
+
+  if ( $product->is_in_stock() ) {
+    echo '<div class="stock in-stock mt-2"><small>' . esc_attr( $availability['availability'] ) . '</small></div>';
+  } else {
+    echo '<div class="stock out-of-stock"><small class="d-block product-coming-soon">Hamarosan újra a polcokon</small><a class="btn btn-primary text-white mt-3" href="<?php echo get_the_permalink(); ?>">Értesítést kérek!</a></div></div>';
+  }
+}
+add_action( 'woocommerce_after_shop_loop_item', 'bm_product_stock', 30 );
+
+function bm_loop_add_to_cart_args ($args, $product) {
+  if ( !$product->is_in_stock() ) {
+    $args['class'] .= ' d-none';
+  }
+  return $args;
+}
+add_filter('woocommerce_loop_add_to_cart_args', 'bm_loop_add_to_cart_args', 10, 2);

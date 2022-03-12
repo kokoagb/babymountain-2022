@@ -1,6 +1,5 @@
 const stickyObserver = new IntersectionObserver(
   (entries) => {
-    console.log('foo');
     entries.forEach((entry) => {
       entry.target.classList.toggle('is-sticky', entry.isIntersecting);
     });

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package bm
+ * @package BabyMoutain
  */
 
  $is_landing = strpos(get_page_template_slug(), 'landing') !== false;

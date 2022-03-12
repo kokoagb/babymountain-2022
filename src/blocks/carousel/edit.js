@@ -38,7 +38,9 @@ const InPanelSlide = ({
       {media && (
         <img
           className='wp-block-bm-blocks-carousel--img-preview'
-          src={media.source_url}
+          src={
+            media.media_details?.sizes?.medium?.source_url ?? media.source_url
+          }
         />
       )}
       <TextControl
@@ -83,17 +85,22 @@ const CarouselPreview = ({ slide }) => {
   return media ? (
     <img
       className='wp-block-bm-blocks-carousel--img-preview'
-      src={media.source_url}
+      src={media.media_details?.sizes?.medium?.source_url ?? media.source_url}
     />
   ) : null;
 };
 
 export default function Edit({ attributes, setAttributes }) {
   const selectMedia = (media) => {
+    console.log(media);
     setAttributes({
       slides: [
         ...attributes.slides,
-        { id: media.id, imgSrc: media.url, aHref: '' },
+        {
+          id: media.id,
+          imgSrc: media.sizes?.large?.url ?? media.url,
+          aHref: '',
+        },
       ],
     });
   };

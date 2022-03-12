@@ -6,7 +6,7 @@ function bm_header_menu() {
     'theme_location'    => 'primary',
     'depth'             => 2,
     'container'         => false,
-    'menu_class'        => 'navbar-nav',
+    'menu_class'        => 'navbar-nav bm-novecento-sans',
     'walker'			      => new WP_Bootstrap_Navwalker()
   ));
 }
@@ -27,7 +27,7 @@ function bm_session_menu_mobile() {
     'theme_location'    => 'session',
     'depth'             => 1,
     'container'         => false,
-    'menu_class'        => 'navbar-nav d-flex d-xl-none',
+    'menu_class'        => 'navbar-nav d-flex d-xl-none bm-novecento-sans',
     'walker'			      => new WP_Bootstrap_Navwalker()
   ));
 }

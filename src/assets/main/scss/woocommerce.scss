@@ -1,11 +1,13 @@
-body.theme-babymountain-2022.woocommerce {
+// body.theme-babymountain-2022.woocommerce {
+body.theme-babymountain-2022 {
   // seriously woocommerce, WTF?
   &.single-product .product button.single_add_to_cart_button.button,
   .product button.add_to_cart_button.button,
-  &-cart .button,
-  &-checkout #payment #place_order,
+  &.woocommerce-cart .button,
+  &.woocommerce-checkout #payment #place_order,
   .woocommerce-message .button,
-  ul.products li.product .button {
+  ul.products li.product .button,
+  .cwgstock_button {
     @extend .btn;
     @include button-variant(
       $primary,
@@ -21,13 +23,14 @@ body.theme-babymountain-2022.woocommerce {
       $btn-border-radius
     );
     padding: $btn-padding-y $btn-padding-x !important;
+    font-family: 'novecento-sans', sans-serif;
   }
 
-  &-checkout #payment {
+  &.woocommerce-checkout #payment {
     border-radius: 0;
   }
 
-  &-cart {
+  &.woocommerce-cart {
     .coupon {
       #coupon_code {
         @extend .form-control;
@@ -41,7 +44,7 @@ body.theme-babymountain-2022.woocommerce {
 
     a.remove {
       color: $primary !important;
-      line-height: 0.9;
+      line-height: 0.919;
 
       &:hover {
         color: #fff !important;
@@ -54,10 +57,13 @@ body.theme-babymountain-2022.woocommerce {
     color: $primary;
   }
 
-  &.tax-product_cat header.woocommerce-products-header {
+  &.woocommerce.tax-product_cat header.woocommerce-products-header {
     text-align: center;
 
     .woocommerce-products-header__title {
+      @extend .bm-decorative-bg;
+      @extend .bm-decorative-bg-title;
+
       font-family: soft_whisperings;
       margin-top: 5rem;
       margin-bottom: 3rem;
@@ -98,7 +104,7 @@ body.theme-babymountain-2022.woocommerce {
     }
   }
 
-  &-checkout {
+  &.woocommerce-checkout {
     .form-row {
       #order_review_heading {
         margin-top: 1.5rem;
@@ -135,8 +141,19 @@ body.theme-babymountain-2022.woocommerce {
     @extend .form-select;
   }
 
-  &-shop ul.products li.product {
+  ul.products li.product {
     text-align: center;
+
+    .price,
+    .product-coming-soon {
+      min-height: 21px;
+      margin-bottom: 0.5rem;
+      color: $primary;
+    }
+
+    &.outofstock .price {
+      display: none;
+    }
   }
 
   .bm-product-loop {

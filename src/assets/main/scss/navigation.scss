@@ -67,13 +67,17 @@
       left: 0;
       margin: 0;
       border-width: 0;
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
 
-      .dropdown-item:hover {
-        color: white;
-        background-color: $primary;
+      .dropdown-item {
+        font-weight: 100;
+
+        :hover {
+          color: white;
+          background-color: $primary;
+        }
       }
     }
 
