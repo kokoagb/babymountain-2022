@@ -8,9 +8,15 @@ import {
   CheckboxControl,
 } from '@wordpress/components';
 
-const options = [
+const typeOptions = [
   { value: 'primary', label: 'Teli' },
   { value: 'outline', label: 'Körvonal' },
+];
+
+const sizeOptions = [
+  { value: '', label: 'Normál' },
+  { value: 'btn-sm', label: 'Kicsi' },
+  { value: 'btn-lg', label: 'Nagy' },
 ];
 
 export default function Edit({ attributes, setAttributes }) {
@@ -36,7 +42,13 @@ export default function Edit({ attributes, setAttributes }) {
             label='Gomb típusa'
             value={attributes.type}
             onChange={(type) => setAttributes({ type })}
-            options={options}
+            options={typeOptions}
+          />
+          <SelectControl
+            label='Gomb mérete'
+            value={attributes.size}
+            onChange={(size) => setAttributes({ size })}
+            options={sizeOptions}
           />
           <CheckboxControl
             label='Széles gomb'
@@ -46,11 +58,15 @@ export default function Edit({ attributes, setAttributes }) {
         </PanelBody>
       </InspectorControls>
       <a
-        className={cn('btn', {
-          'btn-primary': attributes.type === 'primary',
-          'btn-outline-primary': attributes.type === 'outline',
-          'w-100': attributes.isWide,
-        })}
+        className={cn(
+          'btn',
+          {
+            'btn-primary': attributes.type === 'primary',
+            'btn-outline-primary': attributes.type === 'outline',
+            'w-100 px-0': attributes.isWide,
+          },
+          attributes.size
+        )}
       >
         {attributes.text || 'Gomb'}
       </a>
@@ -63,6 +79,7 @@ Edit.propTypes = {
     text: PropTypes.string,
     aHref: PropTypes.string,
     type: PropTypes.string,
+    size: PropTypes.string,
     isWide: PropTypes.bool,
   }),
   setAttributes: PropTypes.func,

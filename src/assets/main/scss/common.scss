@@ -8,6 +8,8 @@ $primary: #c1ccc3;
 $headings-font-weight: 300;
 
 $btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
 
 $input-border-radius: 0;
 $input-border-radius-sm: 0;
@@ -16,6 +18,8 @@ $input-focus-border-color: #a7a7a7;
 $input-focus-box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
 
 $offcanvas-vertical-height: 40vh;
+
+$enable-negative-margins: true;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import '~bootstrap/scss/variables';
@@ -33,3 +37,7 @@ $spacers: map-merge(
     9: $spacer * 7,
   )
 );
+
+.text-justify {
+  text-align: justify;
+}

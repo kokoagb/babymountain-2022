@@ -1,46 +1,48 @@
 <?php
 
-function bm_blocks_init() {
+function bm_blocks_init()
+{
 	// Bootstrap blocks
-	register_block_type( __DIR__ . '/../build/blocks/container' );
-	register_block_type( __DIR__ . '/../build/blocks/row' );
-	register_block_type( __DIR__ . '/../build/blocks/col' );
+	register_block_type(__DIR__ . '/../build/blocks/container');
+	register_block_type(__DIR__ . '/../build/blocks/row');
+	register_block_type(__DIR__ . '/../build/blocks/col');
 
 	// BabyMountain blocks
-	register_block_type( __DIR__ . '/../build/blocks/button' );
-	register_block_type( __DIR__ . '/../build/blocks/carousel' );
+	register_block_type(__DIR__ . '/../build/blocks/button');
+	register_block_type(__DIR__ . '/../build/blocks/carousel');
 	// register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
-	register_block_type( __DIR__ . '/../build/blocks/testimonials' );
-	register_block_type( __DIR__ . '/../build/blocks/products', array(
+	register_block_type(__DIR__ . '/../build/blocks/testimonials');
+	register_block_type(__DIR__ . '/../build/blocks/products', array(
 		'render_callback' => 'bm_dynamic_block_products'
-	) );
-	register_block_type( __DIR__ . '/../build/blocks/product-categories', array(
+	));
+	register_block_type(__DIR__ . '/../build/blocks/product-categories', array(
 		'render_callback' => 'bm_dynamic_block_product_categories'
-	) );
+	));
 }
-add_action( 'init', 'bm_blocks_init' );
+add_action('init', 'bm_blocks_init');
 
-function bm_blocks_frontend_scripts() {
-	if ( has_block( 'bm-blocks/carousel' ) || has_block( 'bm-blocks/testimonials' ) ) {
+function bm_blocks_frontend_scripts()
+{
+	if (has_block('bm-blocks/carousel') || has_block('bm-blocks/testimonials')) {
 		wp_enqueue_script(
 			'bm-blocks-swiper',
-      get_template_directory_uri() . '/build/assets/swiper/index.js'
+			get_template_directory_uri() . '/build/assets/swiper/index.js'
 		);
 		wp_enqueue_style(
 			'bm-blocks-swiper',
-      get_template_directory_uri() . '/build/assets/swiper/index.css'
+			get_template_directory_uri() . '/build/assets/swiper/index.css'
 		);
 	}
 	// if ( has_block( 'bm-blocks/newsletter-signup' ) ) {
 	// 	wp_enqueue_script(
 	// 		'bm-blocks-newsletter-signup-validation',
-  //     get_template_directory_uri() . '/build/assets/newsletter-signup-validation/index.js'
+	//     get_template_directory_uri() . '/build/assets/newsletter-signup-validation/index.js'
 	// 	);
 	// }
-	if ( has_block( 'bm-blocks/herbs' ) ) {
+	if (has_block('bm-blocks/herbs')) {
 		wp_enqueue_script(
 			'bm-blocks-herbs',
-      get_template_directory_uri() . '/build/assets/herbs/index.js'
+			get_template_directory_uri() . '/build/assets/herbs/index.js'
 		);
 		wp_enqueue_style(
 			'bm-blocks-herbs',
@@ -48,44 +50,48 @@ function bm_blocks_frontend_scripts() {
 		);
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bm_blocks_frontend_scripts' );
+add_action('wp_enqueue_scripts', 'bm_blocks_frontend_scripts');
 
-function bm_block_editor_assets() {
+function bm_block_editor_assets()
+{
 	wp_enqueue_style(
 		'bm-block-editor-css',
 		get_template_directory_uri() . '/build/assets/main/index.css'
 	);
 }
 
-add_action( 'enqueue_block_editor_assets', 'bm_block_editor_assets' );
+add_action('enqueue_block_editor_assets', 'bm_block_editor_assets');
 
-function bm_block_category( $categories ) {
-	$category_slugs = wp_list_pluck( $categories, 'slug' );
-	$categories = in_array( 'babymountain', $category_slugs, true ) ? $categories : array_merge(
+function bm_block_category($categories)
+{
+	$category_slugs = wp_list_pluck($categories, 'slug');
+	$categories = in_array('babymountain', $category_slugs, true) ? $categories : array_merge(
 		array(
-				array(
-						'slug'  => 'babymountain',
-						'title' => 'BabyMountain',
-						'icon'  => null,
-				),
+			array(
+				'slug'  => 'babymountain',
+				'title' => 'BabyMountain',
+				'icon'  => null,
 			),
-			$categories,
+		),
+		$categories,
 	);
-	$categories = in_array( 'bootstrap', $category_slugs, true ) ? $categories : array_merge(
+	$categories = in_array('bootstrap', $category_slugs, true) ? $categories : array_merge(
 		array(
-				array(
-						'slug'  => 'bootstrap',
-						'title' => 'Bootstrap',
-						'icon'  => null,
-				),
+			array(
+				'slug'  => 'bootstrap',
+				'title' => 'Bootstrap',
+				'icon'  => null,
 			),
-			$categories,
+		),
+		$categories,
 	);
 	return $categories;
 }
-add_filter( 'block_categories_all', 'bm_block_category' );
+add_filter('block_categories_all', 'bm_block_category');
 
-function bm_dynamic_block_products () {
+function bm_dynamic_block_products($args)
+{
+	$args = wp_parse_args($args, array('className' => ''));
 	$map_fn = function ($product) {
 		return array(
 			'id' => $product->get_id(),
@@ -95,28 +101,30 @@ function bm_dynamic_block_products () {
 			'price' => $product->get_price()
 		);
 	};
-	$products = wc_get_products( array(
+	$products = wc_get_products(array(
 		'status' => 'publish',
 		'limit' => -1,
 		'visibility' => 'visible'
-	) );
+	));
 	$mapped_products = array_map($map_fn, $products);
-	$markup = '<div class="wp-block-bm-blocks-products">'.
-		'<div class="swiper">'.
-			'<div class="swiper-wrapper"></div>'.
-		'</div>'.
-		'<div class="wp-block-bm-blocks-products-swiper-button-next swiper-button-next"></div>'.
-		'<div class="wp-block-bm-blocks-products-swiper-button-prev swiper-button-prev"></div>'.
-	'</div>'.
-	'<script>window.bmProducts = '.json_encode($mapped_products).'</script>';
+	$markup = '<div class="wp-block-bm-blocks-products ' . $args['className'] . '">' .
+		'<div class="swiper">' .
+		'<div class="swiper-wrapper"></div>' .
+		'</div>' .
+		'<div class="wp-block-bm-blocks-products-swiper-button-next swiper-button-next"></div>' .
+		'<div class="wp-block-bm-blocks-products-swiper-button-prev swiper-button-prev"></div>' .
+		'</div>' .
+		'<script>window.bmProducts = ' . json_encode($mapped_products) . '</script>';
 	return $markup;
 }
 
-function bm_dynamic_block_product_categories () {
+function bm_dynamic_block_product_categories($args)
+{
+	$args = wp_parse_args($args, array('className' => ''));
 	$mapped_categories = array();
-	$categories = get_categories( array(
+	$categories = get_categories(array(
 		'taxonomy' => 'product_cat',
-	) );
+	));
 
 	foreach ($categories as $category) {
 		$image_url = wp_get_attachment_url(get_term_meta($category->term_id, 'thumbnail_id', true));
@@ -129,24 +137,24 @@ function bm_dynamic_block_product_categories () {
 		}
 	}
 
-	$markup = '<div class="wp-block-bm-blocks-product-categories">'.
-		'<div class="swiper">'.
-			'<div class="swiper-wrapper"></div>'.
-		'</div>'.
-		'<div class="wp-block-bm-blocks-product-categories-swiper-button-next swiper-button-next"></div>'.
-		'<div class="wp-block-bm-blocks-product-categories-swiper-button-prev swiper-button-prev"></div>'.
-	'</div>'.
-	'<script>window.bmCategories = '.json_encode($mapped_categories).'</script>';
+	$markup = '<div class="wp-block-bm-blocks-product-categories ' . $args['className'] . '">' .
+		'<div class="swiper">' .
+		'<div class="swiper-wrapper"></div>' .
+		'</div>' .
+		'<div class="wp-block-bm-blocks-product-categories-swiper-button-next swiper-button-next"></div>' .
+		'<div class="wp-block-bm-blocks-product-categories-swiper-button-prev swiper-button-prev"></div>' .
+		'</div>' .
+		'<script>window.bmCategories = ' . json_encode($mapped_categories) . '</script>';
 	return $markup;
 }
 
 // Workaround for assets loaded by block.json
-add_filter( 'plugins_url', function ( $url, $path, $plugin ) {
-    if ( strpos( $url, get_template_directory() ) !== false ) {
-        $url = str_replace( 'wp-content/plugins' . ABSPATH, '', $url );
-    }
-    return $url;
-}, 10, 3 );
+add_filter('plugins_url', function ($url, $path, $plugin) {
+	if (strpos($url, get_template_directory()) !== false) {
+		$url = str_replace('wp-content/plugins' . ABSPATH, '', $url);
+	}
+	return $url;
+}, 10, 3);
 
 // function lakewood_print_scripts_styles() {
 // 	if( is_admin() ) {

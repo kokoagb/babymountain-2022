@@ -11,11 +11,15 @@ export default function Save({ attributes }) {
     >
       <a
         href={attributes.aHref}
-        className={cn('btn', {
-          'btn-primary': attributes.type === 'primary',
-          'btn-outline-primary': attributes.type === 'outline',
-          'w-100': attributes.isWide,
-        })}
+        className={cn(
+          'btn',
+          {
+            'btn-primary': attributes.type === 'primary',
+            'btn-outline-primary': attributes.type === 'outline',
+            'w-100 px-0': attributes.isWide,
+          },
+          attributes.size
+        )}
       >
         {attributes.text || 'Gomb'}
       </a>
@@ -28,6 +32,7 @@ Save.propTypes = {
     text: PropTypes.string,
     aHref: PropTypes.string,
     type: PropTypes.string,
+    size: PropTypes.string,
     isWide: PropTypes.bool,
   }),
 };

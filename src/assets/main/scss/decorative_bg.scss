@@ -2,7 +2,12 @@
   position: relative;
 
   &::before {
-    content: url('/wp-content/themes/babymountain-2022/static/images/decorative_bg.jpg');
+    // content: url('/wp-content/themes/babymountain-2022/static/images/decorative_bg.jpg');
+    content: '';
+    aspect-ratio: 1440 / 339;
+    background-image: url('/wp-content/themes/babymountain-2022/static/images/decorative_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     width: 100vw;
     top: 0;
@@ -11,10 +16,21 @@
     z-index: -1;
   }
 
+  &-flipped {
+    &::before {
+      transform: translate(-50%, -50%) scale(-1);
+    }
+  }
+
   &-title {
     &::before {
-      top: 0;
       transform: translate(-50%, -50%);
+    }
+
+    &-flipped {
+      &::before {
+        transform: translate(-50%, -50%) scale(-1);
+      }
     }
   }
 
@@ -23,12 +39,27 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+
+    &-flipped {
+      &::before {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(-1);
+      }
+    }
   }
 
   &-bottom {
     &::before {
       top: unset;
       bottom: 0;
+    }
+
+    &-flipped {
+      &::before {
+        top: unset;
+        bottom: 0;
+        transform: scale(-1);
+      }
     }
   }
 }

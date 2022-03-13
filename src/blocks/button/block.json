@@ -24,6 +24,10 @@
       "type": "string",
       "default": "primary"
     },
+    "size": {
+      "type": "string",
+      "default": ""
+    },
     "isWide": {
       "type": "boolean",
       "default": false

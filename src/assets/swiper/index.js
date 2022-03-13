@@ -94,13 +94,13 @@ window.addEventListener('DOMContentLoaded', () => {
       200: {
         slidesPerView: 1,
       },
-      400: {
+      500: {
         slidesPerView: 2,
       },
-      600: {
+      800: {
         slidesPerView: 3,
       },
-      800: {
+      1000: {
         slidesPerView: 4,
       },
     },
@@ -138,10 +138,10 @@ window.addEventListener('DOMContentLoaded', () => {
       200: {
         slidesPerView: 1,
       },
-      400: {
+      500: {
         slidesPerView: 2,
       },
-      600: {
+      800: {
         slidesPerView: 3,
       },
     },
