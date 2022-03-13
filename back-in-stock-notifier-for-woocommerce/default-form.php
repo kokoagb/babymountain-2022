@@ -21,7 +21,7 @@
     <input type="hidden" class="cwg-security" name="cwg-security" value="<?php esc_html_e($security); ?>" />
     <?php $additional_class_name = isset($get_option['btn_class']) && '' != $get_option['btn_class'] ? str_replace(',', ' ', $get_option['btn_class']) : ''; ?>
     <input type="submit" name="cwgstock_submit" class="cwgstock_button btn btn-primary <?php esc_html_e($additional_class_name); ?>" <?php echo do_shortcode(apply_filters('cwgstock_submit_attr', '', $product_id, $variation_id)); ?> value="<?php esc_html_e($instock_api->sanitize_text_field($button_label)); ?>" />
-    <div class="cwgstock_output"></div>
+    <div class="cwgstock_output mt-2"></div>
     <?php do_action('cwginstock_after_submit_button', $product_id, $variation_id); ?>
   </div>
 </section>
