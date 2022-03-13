@@ -4,3 +4,13 @@
     display: none !important;
   }
 }
+
+.swal2-content {
+  padding: 0 !important;
+
+  .cwginstock-subscribe-form {
+    div:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

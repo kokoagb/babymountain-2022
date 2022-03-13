@@ -149,7 +149,7 @@ function bm_product_stock() {
   if ( $product->is_in_stock() ) {
     echo '<div class="stock in-stock mt-2"><small>' . esc_attr( $availability['availability'] ) . '</small></div>';
   } else {
-    echo '<div class="stock out-of-stock"><small class="d-block product-coming-soon">Hamarosan újra a polcokon</small><a class="btn btn-primary text-white mt-3" href="<?php echo get_the_permalink(); ?>">Értesítést kérek!</a></div></div>';
+    echo '<div class="stock out-of-stock"><small class="d-block product-coming-soon">Hamarosan újra a polcokon</small></div></div>';
   }
 }
 add_action( 'woocommerce_after_shop_loop_item', 'bm_product_stock', 30 );
