@@ -1,3 +1,7 @@
+@mixin btn-primary-text-color {
+  color: white;
+}
+
 .wpforms-form {
   .wpforms-field {
     padding: 0;
@@ -35,4 +39,15 @@
 
 .btn {
   font-family: 'novecento-sans', sans-serif;
+
+  &-primary {
+    color: white;
+  }
+
+  &-primary,
+  &-outline-primary {
+    &:hover {
+      color: white;
+    }
+  }
 }

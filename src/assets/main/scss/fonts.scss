@@ -97,6 +97,14 @@
   font-stretch: normal;
 }
 
+@font-face {
+  font-family: 'soft_whisperings';
+  src: url('/wp-content/themes/babymountain-2022/static/fonts/softwhisperings.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .bm-hero-new {
   font-family: 'hero-new', sans-serif;
 }
@@ -113,10 +121,14 @@
   font-family: 'novecento-sans-wide', sans-serif;
 }
 
+.bm-soft-whisperings {
+  font-family: 'soft_whisperings', sans-serif;
+}
+
 body {
   font-family: 'hero-new', sans-serif;
   font-weight: 100;
-  color: #7d7e7d;
+  color: $body-color;
 }
 
 h1,

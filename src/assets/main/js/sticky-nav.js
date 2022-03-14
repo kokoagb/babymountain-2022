@@ -11,5 +11,8 @@ const stickyObserver = new IntersectionObserver(
 );
 
 window.addEventListener('DOMContentLoaded', () => {
-  stickyObserver.observe(document.querySelector('#bm-main-nav'));
+  const nav = document.querySelector('#bm-main-nav');
+  if (nav) {
+    stickyObserver.observe(nav);
+  }
 });

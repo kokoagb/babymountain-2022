@@ -89,17 +89,21 @@ add_action('after_setup_theme', 'bm_content_width', 0);
  */
 function bm_scripts()
 {
+	global $pagename;
+
 	// Styles
 	wp_enqueue_style('bm-style', get_template_directory_uri() . '/build/assets/main/public.css', array(), BM_VERSION);
 	wp_style_add_data('bm-style', 'rtl', 'replace');
 
-	// Conditional styles
-	if (is_product_category()) {
-		wp_enqueue_style('soft_whisperings', get_template_directory_uri() . '/static/fonts/soft_whisperings.css', array(), BM_VERSION);
-	}
-
 	// Scripts
 	wp_enqueue_script('bm-navigation', get_template_directory_uri() . '/build/assets/main/index.js', array(), BM_VERSION, true);
+
+	if ($pagename === 'silent-night') {
+		wp_enqueue_style('bm-swiper', get_template_directory_uri() . '/build/assets/swiper/index.css', array(), BM_VERSION);
+		wp_enqueue_script('bm-swiper', get_template_directory_uri() . '/build/assets/swiper/index.js');
+		wp_enqueue_script('bm-vue', get_template_directory_uri() . '/static/js/vue.js', array(), BM_VERSION, true);
+		wp_enqueue_style('bm-carousel', get_template_directory_uri() . '/build/blocks/carousel/public.css', array(), BM_VERSION);
+	}
 }
 add_action('wp_enqueue_scripts', 'bm_scripts');
 

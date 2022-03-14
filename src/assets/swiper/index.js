@@ -5,6 +5,9 @@ import 'swiper/scss/lazy';
 import 'swiper/scss/navigation';
 import 'swiper/scss/virtual';
 
+window.Swiper = Swiper;
+window.SwiperModules = [Autoplay, Lazy, Navigation, Virtual];
+
 window.addEventListener('DOMContentLoaded', () => {
   new Swiper('.wp-block-bm-blocks-carousel', {
     modules: [Autoplay, Lazy, Navigation],

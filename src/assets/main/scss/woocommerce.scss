@@ -24,6 +24,8 @@ body.theme-babymountain-2022 {
     );
     padding: $btn-padding-y $btn-padding-x !important;
     font-family: 'novecento-sans', sans-serif;
+    -webkit-font-smoothing: auto;
+    text-transform: uppercase;
   }
 
   &.woocommerce-checkout #payment {
@@ -44,7 +46,7 @@ body.theme-babymountain-2022 {
 
     a.remove {
       color: $primary !important;
-      line-height: 0.919;
+      line-height: 1.1;
 
       &:hover {
         color: #fff !important;
@@ -62,7 +64,7 @@ body.theme-babymountain-2022 {
 
     .woocommerce-products-header__title {
       @extend .bm-decorative-bg;
-      @extend .bm-decorative-bg-title;
+      @extend .bm-decorative-bg-title-flipped;
 
       font-family: soft_whisperings;
       margin-top: 5rem;
