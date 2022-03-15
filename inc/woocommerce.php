@@ -197,3 +197,44 @@ function bm_checkout_process()
   }
 }
 add_action('woocommerce_checkout_process', 'bm_checkout_process');
+
+function bm_email_before($order, $sent_to_admin, $plain_text, $email)
+{
+  set_query_var('order', $order);
+  set_query_var('sent_to_admin', $sent_to_admin);
+  set_query_var('plain_text', $plain_text);
+  set_query_var('email', $email);
+  get_template_part('template-parts/email_before');
+};
+add_action('woocommerce_email_before_order_table', 'bm_email_before', 10, 4);
+
+function bm_woocommerce_email_styles($css)
+{
+  $css .= ".woocommerce-bacs-bank-details { display: none; }";
+  $css .= "#body_content_inner { text-align: justify !important; }";
+  $css .= "address.address { border: none !important; padding: 0 !important; font-style: normal !important; }";
+  return $css;
+}
+add_filter('woocommerce_email_styles', 'bm_woocommerce_email_styles');
+
+function bm_email_after($email)
+{
+  get_template_part('template-parts/email_after');
+};
+add_action('woocommerce_email_footer', 'bm_email_after', 10, 1);
+
+function bm_register_form()
+{
+  get_template_part('template-parts/register_privacy');
+}
+add_action('woocommerce_register_form', 'bm_register_form', 100);
+
+function bm_register_post($username, $email, $validation_errors)
+{
+  if (!isset($_POST['privacy'])) {
+    $validation_errors->add('register_privacy_error', 'Kérlek, fogadd el az adatkezelési szabályzatot');
+  }
+  return $validation_errors;
+}
+
+add_action('woocommerce_register_post', 'bm_register_post', 10, 3);
