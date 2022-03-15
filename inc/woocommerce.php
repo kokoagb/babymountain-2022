@@ -115,6 +115,14 @@ function bm_cart_count_fragments($fragments)
 }
 add_filter('woocommerce_add_to_cart_fragments', 'bm_cart_count_fragments', 10, 1);
 
+function bm_wc_pagination($args)
+{
+  $args['prev_text'] = '<';
+  $args['next_text'] = '>';
+  return $args;
+}
+add_filter('woocommerce_pagination_args',   'bm_wc_pagination');
+
 function bm_shipping_labels($label, $method)
 {
   if (strstr($label, 'Személyes átvétel')) {
@@ -238,3 +246,72 @@ function bm_register_post($username, $email, $validation_errors)
 }
 
 add_action('woocommerce_register_post', 'bm_register_post', 10, 3);
+
+function bm_get_subcategory_terms($terms, $taxonomies, $args)
+{
+  if (in_array('product_cat', $taxonomies) && is_shop()) {
+    return array_filter($terms, function ($term) {
+      return !in_array($term->slug, ['uj_termek', 'slager_termek', 'papirzsakok']);
+    });
+  }
+
+  return $terms;
+}
+
+add_filter('get_terms', 'bm_get_subcategory_terms', 10, 3);
+
+function bm_payment_reminder_icon()
+{
+  echo '<style>
+    a.button.wc-action-button.wc-action-button-woopar.woopar:after {
+        content: "\f531";
+    }
+  </style>';
+}
+
+add_action('admin_head', 'bm_payment_reminder_icon');
+
+function bm_add_admin_order_custom_actions_button($actions, $order)
+{
+  if (($order->get_payment_method() === 'borgun' || $order->get_payment_method() === 'Bankkártyás fizetés') && $order->has_status(array('on-hold', 'pending', 'cancelled'))) {
+    $action_slug = 'email_invoice';
+
+    $actions[$action_slug] = array(
+      'url'    => wp_nonce_url(
+        admin_url('admin-ajax.php?action=change_order_status&order_id=' . $order->get_id()),
+        'change-order-status'
+      ),
+      'name'   => 'Fizetési mód átállítása',
+      'action' => $action_slug,
+    );
+  }
+  return $actions;
+}
+
+add_filter('woocommerce_admin_order_actions', 'bm_add_admin_order_custom_actions_button', 10, 2);
+
+function bm_change_order_status()
+{
+  if (current_user_can('edit_shop_orders') && check_admin_referer('change-order-status') && isset($_GET['order_id']) && get_post_type(absint(wp_unslash($_GET['order_id']))) === 'shop_order') {
+    $order_id = absint(wp_unslash($_GET['order_id']));
+    $order = wc_get_order($order_id);
+    $order->set_payment_method('bacs');
+    $order->set_payment_method_title('Banki Átutalás');
+    $order->save();
+    $message = "Kártyás fizetésed nem sikerült, rendelésed \"visszamondva\" státuszt kapott. Hogy rendelésed ne vesszen el, a Sóhegyecskéket kifizetheted banki átutalással is, melyhez az utalási adatok:\n\nNév: BabyMountain Kft.\nSzámlaszám: 11737083-24683180\nSzámlaveztő bank: OTP Bank\nIBAN: HU13117370832468318000000000\nBIC/Swift: OTPVHUHB";
+    $order->add_order_note($message, 1);
+    if (wp_safe_redirect(wp_get_referer() ? wp_get_referer() : admin_url('edit.php?post_type=shop_order'))) {
+      exit();
+    }
+  }
+}
+
+add_action('wp_ajax_change_order_status', 'bm_change_order_status');
+
+function bm_add_custom_order_status_actions_button_css()
+{
+  $action_slug = 'email_invoice';
+  echo '<style>.wc-action-button-' . $action_slug . '::after { font-family: woocommerce !important; content: "\e014" !important; }</style>';
+}
+
+add_action('admin_head', 'bm_add_custom_order_status_actions_button_css');
