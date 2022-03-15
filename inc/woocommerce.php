@@ -315,3 +315,11 @@ function bm_add_custom_order_status_actions_button_css()
 }
 
 add_action('admin_head', 'bm_add_custom_order_status_actions_button_css');
+
+
+function bm_remove_additional_info_tab($tabs)
+{
+  unset($tabs['additional_information']);
+  return $tabs;
+}
+add_filter('woocommerce_product_tabs', 'bm_remove_additional_info_tab', 98);

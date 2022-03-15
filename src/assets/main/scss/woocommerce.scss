@@ -83,6 +83,8 @@ body.theme-babymountain-2022 {
     @include media-breakpoint-up(md) {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
+      border-bottom: 1px solid $primary;
       padding: 0;
     }
 
@@ -90,7 +92,6 @@ body.theme-babymountain-2022 {
       flex: 1;
       text-align: center;
       border: none;
-      font-size: 1.5rem;
       border-radius: 0;
       background-color: transparent;
       text-transform: uppercase;
@@ -238,5 +239,13 @@ body.theme-babymountain-2022 {
 
   section.related.products {
     clear: both;
+  }
+
+  .woocommerce-product-gallery {
+    ol.flex-control-thumbs {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem !important;
+    }
   }
 }
