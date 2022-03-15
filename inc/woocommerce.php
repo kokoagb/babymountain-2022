@@ -183,3 +183,17 @@ function bm_no_products_found()
   echo do_shortcode('<p>Sajnos a keresés nem hozott eredményt, de itt láthatod legnépszerűbb termékeinket:</p>[products limit="4" columns="4" orderby="popularity" ]');
 }
 add_action('woocommerce_no_products_found', 'bm_no_products_found');
+
+function bm_review_order_before_submit()
+{
+  get_template_part('template-parts/checkout_privacy');
+}
+add_action('woocommerce_review_order_before_submit', 'bm_review_order_before_submit');
+
+function bm_checkout_process()
+{
+  if (!$_POST['privacy']) {
+    wc_add_notice('Az adatkezelés elfogadása kötelező.', 'error');
+  }
+}
+add_action('woocommerce_checkout_process', 'bm_checkout_process');
