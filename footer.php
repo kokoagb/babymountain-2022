@@ -46,6 +46,20 @@
 				</label>
 			</div>
 		</form>
+		<div class="site-social-icons d-flex d-xl-none justify-content-center mt-5 text-center gap-3 position-relative">
+			<a href="https://www.facebook.com/babymountainhimalaya" target="_blank" class="d-block">
+				<?php bm_facebook_icon('site-footer-facebook-icon'); ?>
+			</a>
+			<a href="https://www.instagram.com/babymountain.himalaya" target="_blank" class="d-block">
+				<?php bm_insta_icon('site-footer-insta-icon'); ?>
+			</a>
+			<a href="https://hu.pinterest.com/babymhimalaya" target="_blank" class="d-block">
+				<?php bm_pinterest_icon('site-footer-pinterest-icon'); ?>
+			</a>
+			<a href="https://www.youtube.com/channel/UClWy9zp6FpebwtkDDzvqlNg" target="_blank" class="d-block">
+				<?php bm_youtube_icon('site-footer-youtube-icon'); ?>
+			</a>
+		</div>
 		<div class="site-footer-inner position-relative" aria-hidden="true">
 			<img class="site-footer-background img-fluid" src="<?php echo get_template_directory_uri(); ?>/static/images/footer.jpg" loading="lazy">
 			<img class="site-footer-logo" src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" loading="lazy">

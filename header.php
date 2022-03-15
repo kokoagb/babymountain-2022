@@ -70,7 +70,7 @@ $is_landing = strpos(get_page_template_slug(), 'landing') !== false;
 	<?php if ($pagename !== 'silent-night' && !$is_landing) : ?>
 		<header id="masthead" class="site-header d-none d-xl-block">
 			<div class="d-flex align-items-center px-3 pt-4 pb-5">
-				<div class="site-header-social-icons d-inline-flex gap-2">
+				<div class="site-social-icons d-inline-flex gap-2">
 					<a href="https://www.facebook.com/babymountainhimalaya" target="_blank" class="d-block">
 						<?php bm_facebook_icon('site-header-facebook-icon'); ?>
 					</a>

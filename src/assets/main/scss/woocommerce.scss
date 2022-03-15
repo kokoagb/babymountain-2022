@@ -71,12 +71,20 @@ body.theme-babymountain-2022 {
       margin-bottom: 3rem;
       text-transform: capitalize;
     }
+
+    .term-description {
+      margin-bottom: 5rem;
+    }
   }
 
   .product .woocommerce-tabs ul.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
 
     li {
       flex: 1;
@@ -103,6 +111,23 @@ body.theme-babymountain-2022 {
 
     &::before {
       content: unset;
+    }
+  }
+
+  .woocommerce-Tabs-panel {
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: block !important;
+    }
+  }
+
+  table.variations {
+    th.label {
+      padding-right: 1rem;
     }
   }
 

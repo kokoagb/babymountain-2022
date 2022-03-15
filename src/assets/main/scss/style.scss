@@ -1,7 +1,6 @@
 @import './common';
 
 // Boostrap components
-@import '~bootstrap/scss/utilities';
 @import '~bootstrap/scss/reboot';
 @import '~bootstrap/scss/type';
 @import '~bootstrap/scss/images';
@@ -22,15 +21,16 @@
 @import '~bootstrap/scss/utilities/api';
 
 // Custom styles
+@import './decorative_bg';
 @import './fonts';
 @import './wordpress';
+@import './pages.scss';
 @import './alignment';
 @import './header';
 @import './footer';
 @import './navigation';
 @import './forms';
 @import './icons';
-@import './decorative_bg';
 @import './misc';
 
 // WooCommerce overrides

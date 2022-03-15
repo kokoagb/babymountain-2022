@@ -8,6 +8,12 @@
     margin-bottom: 1rem;
   }
 
+  .wpforms-field-checkbox {
+    ul {
+      padding-left: 0;
+    }
+  }
+
   label {
     @extend .form-label;
     font-weight: normal !important;

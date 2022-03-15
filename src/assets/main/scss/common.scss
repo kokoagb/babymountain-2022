@@ -27,8 +27,6 @@ $enable-negative-margins: true;
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/root';
 
-$theme-colors: map-remove($theme-colors, 'info', 'light', 'dark');
-
 $spacers: map-merge(
   $spacers,
   (
@@ -36,6 +34,51 @@ $spacers: map-merge(
     7: $spacer * 5,
     8: $spacer * 6,
     9: $spacer * 7,
+  )
+);
+
+@import '~bootstrap/scss/utilities';
+
+$theme-colors: map-remove($theme-colors, 'info', 'light', 'dark');
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'opacity':
+      map-merge(
+        map-get($utilities, 'opacity'),
+        (
+          responsive: true,
+        )
+      ),
+    'start':
+      map-merge(
+        map-get($utilities, 'start'),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'start'), 'values'),
+              (
+                initial: initial,
+              )
+            ),
+        )
+      ),
+    'translate-middle':
+      map-merge(
+        map-get($utilities, 'translate-middle'),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'translate-middle'), 'values'),
+              (
+                initial: initial,
+              )
+            ),
+        )
+      ),
   )
 );
 

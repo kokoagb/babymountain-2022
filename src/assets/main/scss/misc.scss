@@ -20,3 +20,11 @@
     margin-bottom: 1rem;
   }
 }
+
+:target {
+  scroll-margin-top: 54px;
+
+  @include media-breakpoint-up(xl) {
+    scroll-margin-top: 100px;
+  }
+}

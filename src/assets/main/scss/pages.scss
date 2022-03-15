@@ -1,0 +1,13 @@
+.page-template-default {
+  .entry-header {
+    .entry-title {
+      @extend .mt-5;
+      @extend .mb-9;
+      @extend .bm-decorative-bg;
+      @extend .bm-decorative-bg-title-flipped;
+      font-size: 28px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
