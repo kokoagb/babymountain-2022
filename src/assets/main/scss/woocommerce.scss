@@ -28,14 +28,31 @@ body.theme-babymountain-2022 {
     text-transform: uppercase;
   }
 
-  &.woocommerce-checkout #payment {
-    border-radius: 0;
+  &.woocommerce-checkout {
+    #payment {
+      border-radius: 0;
+    }
+
+    #ship-to-different-address {
+      @media screen and (max-width: 768px) {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &.woocommerce-cart {
     .coupon {
       #coupon_code {
         @extend .form-control;
+        width: 48%;
+      }
+
+      button.button {
+        width: 48%;
+      }
+
+      @include media-breakpoint-up(sm) {
         width: unset;
       }
     }
@@ -246,6 +263,17 @@ body.theme-babymountain-2022 {
       display: flex;
       gap: 0.5rem;
       margin-top: 0.5rem !important;
+    }
+  }
+
+  table.shop_table_responsive tr.woocommerce-cart-form__cart-item td {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        margin-right: 0.5rem;
+      }
     }
   }
 }

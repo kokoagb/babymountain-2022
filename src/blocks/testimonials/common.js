@@ -22,13 +22,13 @@ export const Slide = ({ slide }) => (
       <blockquote className='m-0 mb-3 flex-fill'>
         &quot;{slide.text}&quot;
       </blockquote>
-      <div className='d-flex justify-content-center mb-3 wp-block-bm-blocks-testimonials-slide-stars'>
+      <div className='text-center mb-3'>{slide.author}</div>
+      <div className='d-flex justify-content-center wp-block-bm-blocks-testimonials-slide-stars'>
         <FontAwesomeIcon icon={faStar} className='mr-1' />
         <FontAwesomeIcon icon={faStar} className='mr-1' />
         <FontAwesomeIcon icon={faStar} className='mr-1' />
         <FontAwesomeIcon icon={faStar} className='mr-1' />
         <FontAwesomeIcon icon={faStar} className='mr-1' />
-        {slide.author}
       </div>
     </div>
   </div>

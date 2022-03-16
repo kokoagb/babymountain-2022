@@ -113,7 +113,7 @@ $is_landing = strpos(get_page_template_slug(), 'landing') !== false;
 					<?php bm_cart_link(); ?>
 				</span>
 
-				<div class="offcanvas offcanvas-bottom" tabindex="-1" id="bm-main-menu" aria-labelledby="bm-main-menu-label">
+				<div class="offcanvas offcanvas-start" tabindex="-1" id="bm-main-menu" aria-labelledby="bm-main-menu-label">
 					<button type="button" class="btn-close text-reset position-absolute top-0 end-0 p-3 d-block d-xl-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					<div class="offcanvas-body">
 						<?php bm_header_menu(); ?>
