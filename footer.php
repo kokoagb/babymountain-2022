@@ -68,6 +68,7 @@
 	<nav class="p-2 bg-white">
 		<div class="container d-flex flex-column flex-xl-row">
 			<?php bm_footer_menu(); ?>
+			<?php bm_payment_icons(); ?>
 			<strong class="ms-xl-auto mt-3 mt-xl-0">
 				BabyMountain ©2022
 			</strong>

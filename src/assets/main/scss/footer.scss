@@ -23,4 +23,15 @@
       max-width: 7rem;
     }
   }
+
+  .bm-payment-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      height: 1.5em;
+      width: auto;
+    }
+  }
 }
