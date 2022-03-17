@@ -47,7 +47,7 @@ function outline_star($class = '')
   <div id="silent-night-carousel" class="wp-block-bm-blocks-carousel swiper mb-8 bg-white rounded overflow-hidden">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img data-src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0124.jpg?20200503" class="swiper-lazy">
+        <img data-src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3227.JPG?20200503" class="swiper-lazy">
       </div>
       <div class="swiper-slide">
         <img data-src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0277.jpg?20200503" class="swiper-lazy">
@@ -96,7 +96,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0114.jpg" loading="lazy" />
+      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3228.JPG" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -115,7 +115,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 mb-3 mb-lg-0">
-      <img class="rounded img16-9" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
+      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -134,7 +134,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
+      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -153,7 +153,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-4 mb-3 mb-lg-0">
-      <img class="rounded img16-9" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
+      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
     </div>
     <div class="col-lg-8">
       <div class="card h-100 text-justify p-4 rounded">
@@ -307,7 +307,7 @@ function outline_star($class = '')
         </h2>
         <div class="row">
           <div class="col-lg-5 mb-3 mb-lg-0">
-            <img class="rounded img1-1" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0308.jpg?20210221" loading="lazy" />
+            <img class="rounded img1-1" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3230.JPG?20210221" loading="lazy" />
           </div>
           <div class="col-lg-7">
             <div class="card h-100 text-justify p-4 rounded">
@@ -364,7 +364,7 @@ function outline_star($class = '')
     </div>
     <div class="col-12 col-md-6">
       <div class="bg-white rounded pt-2">
-        <?php echo do_shortcode('[instagram-feed]'); ?>
+        <?php echo do_shortcode('[instagram-feed feed=2]'); ?>
       </div>
     </div>
   </div>
