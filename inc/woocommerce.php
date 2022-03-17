@@ -170,12 +170,13 @@ function bm_product_stock()
   $availability = $product->get_availability();
 
   if ($product->is_in_stock()) {
-    echo '<div class="stock in-stock mt-2"><small>' . esc_attr($availability['availability']) . '</small></div>';
+    // echo '<div class="stock in-stock mt-2"><small>' . esc_attr($availability['availability']) . '</small></div>';
   } else {
-    echo '<div class="stock out-of-stock"><small class="d-block product-coming-soon">Hamarosan újra a polcokon</small></div></div>';
+    echo '<div class="stock out-of-stock"><small class="d-block product-coming-soon">Hamarosan újra a polcokon</small></div>';
   }
 }
-add_action('woocommerce_after_shop_loop_item', 'bm_product_stock', 30);
+add_action('woocommerce_after_shop_loop_item', 'bm_product_stock', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart');
 
 function bm_loop_add_to_cart_args($args, $product)
 {
