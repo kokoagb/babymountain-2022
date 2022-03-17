@@ -125,4 +125,10 @@ $is_landing = strpos(get_page_template_slug(), 'landing') !== false;
 
 
 		<img src="<?php echo get_template_directory_uri(); ?>/static/images/ret.jpg" alt="Rét" loading="lazy" class="header-herbs mb-5" />
+
+		<?php if (is_front_page()) : ?>
+			<div class="bm-novecento-sans h5 mb-5 mt-n4 text-center text-primary text-uppercase px-2">
+				Természetes gyógymód Kisbabádnak és az egész Családnak
+			</div>
+		<?php endif; ?>
 	<?php endif; ?>
