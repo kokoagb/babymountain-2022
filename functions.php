@@ -10,7 +10,7 @@
 
 if (!defined('BM_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('BM_VERSION', '1.0.0');
+	define('BM_VERSION', '1.0.1');
 }
 
 /**
