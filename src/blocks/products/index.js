@@ -18,6 +18,7 @@ import './style.scss';
  * Internal dependencies
  */
 import Edit from './edit';
+import Save from './save';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -25,8 +26,6 @@ import Edit from './edit';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType('bm-blocks/products', {
-  /**
-   * @see ./edit.js
-   */
   edit: Edit,
+  save: Save,
 });

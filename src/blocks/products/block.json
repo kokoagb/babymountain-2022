@@ -13,5 +13,10 @@
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./public.css",
-	"attributes": {}
+	"attributes": {
+		"products": {
+			"type": "array",
+			"default": []
+		}
+	}
 }

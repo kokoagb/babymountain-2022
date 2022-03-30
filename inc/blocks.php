@@ -12,9 +12,7 @@ function bm_blocks_init()
 	register_block_type(__DIR__ . '/../build/blocks/carousel');
 	// register_block_type( __DIR__ . '/../build/blocks/newsletter-signup' );
 	register_block_type(__DIR__ . '/../build/blocks/testimonials');
-	register_block_type(__DIR__ . '/../build/blocks/products', array(
-		'render_callback' => 'bm_dynamic_block_products'
-	));
+	register_block_type(__DIR__ . '/../build/blocks/products');
 	register_block_type(__DIR__ . '/../build/blocks/product-categories', array(
 		'render_callback' => 'bm_dynamic_block_product_categories'
 	));
