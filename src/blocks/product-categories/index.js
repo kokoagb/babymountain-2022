@@ -18,6 +18,7 @@ import './style.scss';
  * Internal dependencies
  */
 import Edit from './edit';
+import Save from './save';
 
 /**
  * Every block starts by registering a new block type definition.
@@ -29,4 +30,5 @@ registerBlockType('bm-blocks/product-categories', {
    * @see ./edit.js
    */
   edit: Edit,
+  save: Save,
 });

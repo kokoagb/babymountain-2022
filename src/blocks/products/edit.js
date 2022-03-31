@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect, useMemo } from '@wordpress/element';
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, PanelRow } from '@wordpress/components';
+import { PanelBody } from '@wordpress/components';
 import { addQueryArgs } from '@wordpress/url';
 import apiFetch from '@wordpress/api-fetch';
 import './editor.scss';
@@ -51,8 +51,7 @@ export default function Edit({ attributes, setAttributes }) {
 
   useEffect(
     () =>
-      fetchProducts().then((_products) => {
-        console.log({ _products });
+      fetchProducts().then((_products) =>
         setAvailableProducts(
           _products.map(({ id, name, permalink, images, prices }) => ({
             id,
@@ -61,8 +60,8 @@ export default function Edit({ attributes, setAttributes }) {
             image_url: images?.[0]?.thumbnail ?? '',
             price: prices?.price,
           }))
-        );
-      }),
+        )
+      ),
     []
   );
 
