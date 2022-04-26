@@ -12,7 +12,9 @@ import './editor.scss';
 
 const fetchCategories = () =>
   apiFetch({
-    path: addQueryArgs('wc/store/products/categories'),
+    path: addQueryArgs('wc/store/products/categories', {
+      per_page: 0,
+    }),
   });
 
 export default function Edit({ attributes, setAttributes }) {
