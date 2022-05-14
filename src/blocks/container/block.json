@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "name": "bm-blocks/container",
   "version": "0.1.0",
-  "title": "BS Konténer",
+  "title": "Konténer",
   "category": "bootstrap",
   "icon": "grid-view",
   "description": "Bootstrap konténer",
@@ -13,6 +13,10 @@
   "editorScript": "file:./index.js",
   "attributes": {
     "type": {
+      "type": "string",
+      "default": ""
+    },
+    "aHref": {
       "type": "string",
       "default": ""
     }

@@ -1,6 +1,7 @@
 .edit-post-visual-editor {
   @import './common';
   @import './decorative_bg';
+  @import './images.scss';
   @import '~bootstrap/scss/reboot';
   @import '~bootstrap/scss/type';
   @import '~bootstrap/scss/images';
@@ -10,9 +11,4 @@
   @import '~bootstrap/scss/forms';
   @import '~bootstrap/scss/helpers';
   @import '~bootstrap/scss/utilities/api';
-
-  // :where(.wp-block) {
-  //   margin-top: 0;
-  //   margin-bottom: 0;
-  // }
 }

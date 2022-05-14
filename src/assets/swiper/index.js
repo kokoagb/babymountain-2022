@@ -6,7 +6,7 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/virtual';
 
 window.Swiper = Swiper;
-window.SwiperModules = [Autoplay, Lazy, Navigation, Virtual];
+window.SwiperModules = { Autoplay, Lazy, Navigation, Virtual };
 
 window.addEventListener('DOMContentLoaded', () => {
   new Swiper('.wp-block-bm-blocks-carousel', {
@@ -148,5 +148,33 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
       },
     },
+  });
+
+  const aszSwiperElements = document.querySelectorAll('.asz-cards-swiper');
+
+  aszSwiperElements.forEach((el) => {
+    new Swiper(el, {
+      modules: [Autoplay],
+      loop: true,
+      autoplay: {
+        enabled: true,
+        delay: 4000,
+        pauseOnMouseEnter: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        200: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+          autoplay: false,
+        },
+      },
+    });
   });
 });

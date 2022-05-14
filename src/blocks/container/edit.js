@@ -4,12 +4,13 @@ import {
   useInnerBlocksProps,
   InspectorControls,
 } from '@wordpress/block-editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 
 const options = [
   { value: 'container', label: 'Konténer' },
   { value: 'container-fluid', label: 'Fluid' },
   { value: '', label: 'Div' },
+  { value: 'a', label: 'Hivatkozás' },
 ];
 
 export default function Edit({ attributes, setAttributes }) {
@@ -26,6 +27,13 @@ export default function Edit({ attributes, setAttributes }) {
             onChange={(type) => setAttributes({ type })}
             options={options}
           />
+          {attributes.type === 'a' && (
+            <TextControl
+              label='Hivatkozás'
+              value={attributes.aHref}
+              onChange={(aHref) => setAttributes({ aHref })}
+            />
+          )}
         </PanelBody>
       </InspectorControls>
       {innerBlocksProps.children}
@@ -36,6 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
 Edit.propTypes = {
   attributes: PropTypes.shape({
     type: PropTypes.string,
+    aHref: PropTypes.string,
   }),
   setAttributes: PropTypes.func,
 };

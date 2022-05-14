@@ -22,6 +22,7 @@
 
 // Custom styles
 @import './decorative_bg';
+@import './images.scss';
 @import './fonts';
 @import './wordpress';
 @import './pages.scss';
@@ -32,6 +33,9 @@
 @import './forms';
 @import './icons';
 @import './misc';
+
+// Custom page styles
+@import './anya-szuletik.scss';
 
 // WooCommerce overrides
 @import './woocommerce';

@@ -96,7 +96,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3228.JPG" loading="lazy" />
+      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3228.JPG" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -115,7 +115,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 mb-3 mb-lg-0">
-      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -134,7 +134,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -153,7 +153,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-4 mb-3 mb-lg-0">
-      <img class="rounded img16-9 h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
     </div>
     <div class="col-lg-8">
       <div class="card h-100 text-justify p-4 rounded">
@@ -221,7 +221,7 @@ function outline_star($class = '')
     <div class="col-md-6">
       <div class="card d-flex flex-column text-justify p-4 rounded h-100">
         <div class="card-img-top">
-          <img class="img16-9 rounded" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/maison.jpg" loading="lazy" />
+          <img class="img16-9 img-fluid rounded" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/maison.jpg" loading="lazy" />
         </div>
         <h5 class="card-title my-3 text-center">
           <a href="http://www.maisonblog.hu/3-dolog-ami-segit-a-gyors-es-kellemes-altatasban" target="_blank" class="text-body">
@@ -241,7 +241,7 @@ function outline_star($class = '')
     <div class="col-md-6">
       <div class="card d-flex flex-column h-100 text-justify p-4 rounded h-100">
         <div class="card-img-top">
-          <img class="img16-9 rounded" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0270.jpg" loading="lazy" />
+          <img class="img16-9 img-fluid rounded" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0270.jpg" loading="lazy" />
         </div>
         <h5 class="card-title my-3 text-center">
           <a href="/2018/09/17/csak-egy-parna-es-mar-alszik-is/" target="_blank" class="text-body">
@@ -785,7 +785,7 @@ function outline_star($class = '')
     }
   }
 
-  .img16-9 {
+  .img16-9 img-fluid {
     aspect-ratio: 16 / 9;
     object-fit: cover;
   }

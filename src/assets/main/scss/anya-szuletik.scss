@@ -1,0 +1,171 @@
+@import url('https://p.typekit.net/p.css?s=1&k=yqd4yeh&ht=tk&f=24539.24547&a=79798463&app=typekit&e=css');
+
+@font-face {
+  font-family: 'sofia-pro';
+  src: url('https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/l?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n7&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/d?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n7&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/a?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n7&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'sofia-pro';
+  src: url('https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/l?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n4&v=3')
+      format('woff2'),
+    url('https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/d?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n4&v=3')
+      format('woff'),
+    url('https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/a?primer=eb04d7b9c2d5797effccc84acc663b68c96fca837538cda51510c02df0dc6abe&fvd=n4&v=3')
+      format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+body.page-id-17673 {
+  color: #9b8f57;
+  font-size: 20px;
+  font-family: 'sofia-pro', sans-serif;
+
+  article.post-17673 {
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'sofia-pro', sans-serif;
+  }
+
+  p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .asz-hero {
+    position: relative;
+
+    &::before {
+      background-size: cover;
+      content: '';
+      min-width: 110vw;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      background-position: center;
+    }
+
+    &-flower-left::before {
+      aspect-ratio: 1262/480;
+      background-image: url(https://babymountain.hu/wp-content/uploads/2022/04/hatter_1.png);
+    }
+
+    &-flower-right::before {
+      aspect-ratio: 1214/298;
+      background-image: url(https://babymountain.hu/wp-content/uploads/2022/04/hatter_2.png);
+    }
+
+    &-simple::before {
+      aspect-ratio: 1213/593;
+      background-image: url(https://babymountain.hu/wp-content/uploads/2022/04/hatter_3-4.png);
+    }
+
+    &-simple-2::before {
+      aspect-ratio: 1269/383;
+      background-image: url(https://babymountain.hu/wp-content/uploads/2022/04/hatter_5.png);
+    }
+
+    &-1 {
+      .swiper-container {
+        transform: translateY(3rem);
+        border-bottom: 1px solid #ddd;
+      }
+    }
+
+    &-5 {
+      .asz-card {
+        transform: translateY(-5rem);
+
+        @include media-breakpoint-up(lg) {
+          max-width: 320px;
+        }
+      }
+    }
+  }
+
+  .asz-card {
+    height: auto !important;
+    text-decoration: none;
+    color: #9b8f57;
+
+    img {
+      aspect-ratio: 1;
+    }
+
+    & ~ p {
+      max-width: 340px;
+    }
+
+    &-with-bg {
+      position: relative;
+      max-width: 375px;
+      margin: auto;
+
+      &::before {
+        aspect-ratio: 1213/593;
+        background-size: cover;
+        content: '';
+        top: 50%;
+        min-height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-image: url(https://babymountain.hu/wp-content/uploads/2022/04/hatter_3-4.png);
+        background-position: center;
+      }
+
+      &-1 {
+        &::before {
+          right: -5rem;
+          height: 100%;
+        }
+      }
+
+      &-2 {
+        &::before {
+          height: 120%;
+          left: -6rem;
+        }
+      }
+
+      &-3 {
+        &::before {
+          height: 135%;
+          right: -5rem;
+        }
+      }
+    }
+  }
+
+  .wp-block-button__link.has-white-background-color {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  .col-flower-bg {
+    background-image: url(https://babymountain.hu/wp-content/uploads/2022/05/virag_01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
