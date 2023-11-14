@@ -96,7 +96,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3228.JPG" loading="lazy" />
+      <img class="rounded img16-9 img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3228.JPG" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -115,7 +115,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 mb-3 mb-lg-0">
-      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_0269.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -134,7 +134,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-5 order-lg-2 mb-3 mb-lg-0">
-      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1174.jpg" loading="lazy" />
     </div>
     <div class="col-lg-7">
       <div class="card h-100 text-justify p-4 rounded">
@@ -153,7 +153,7 @@ function outline_star($class = '')
 
   <div class="row mb-8">
     <div class="col-lg-4 mb-3 mb-lg-0">
-      <img class="rounded img16-9 img-fluid h-100" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
+      <img class="rounded img16-9 img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/DSC_1132.jpg" loading="lazy" />
     </div>
     <div class="col-lg-8">
       <div class="card h-100 text-justify p-4 rounded">
@@ -269,6 +269,8 @@ function outline_star($class = '')
   </div>
 </div>
 
+<?php $is_xmas = isset($_GET['termek']) && !empty($_GET['termek']); ?>
+
 <div class="container">
   <div id="konnyu-elalvas-teszt" v-cloak v-if="name">
     <h2 class="text-white">{{ name }}, kérlek válaszolj a kérdésekre!</h2>
@@ -307,7 +309,11 @@ function outline_star($class = '')
         </h2>
         <div class="row">
           <div class="col-lg-5 mb-3 mb-lg-0">
-            <img class="rounded img1-1" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3230.JPG?20210221" loading="lazy" />
+            <?php if ($is_xmas) : ?>
+              <img class="rounded img-fluid" src="https://i0.wp.com/babymountain.hu/wp-content/uploads/2021/10/DSC_0684-scaled.jpg?fit=2560%2C2560&ssl=1" loading="lazy" />
+            <?php else : ?>
+              <img class="rounded img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night/IMG_3230.JPG?20210221" loading="lazy" />
+            <?php endif; ?>
           </div>
           <div class="col-lg-7">
             <div class="card h-100 text-justify p-4 rounded">
@@ -370,7 +376,7 @@ function outline_star($class = '')
   </div>
 </div>
 
-<div id="test-modal" class="modal fade" tabindex="-1" role="dialog">
+<div id="test-modal" class="modal fade" tabindex="-1" role="dialog" <?php echo $is_xmas ? 'data-bs-backdrop="static"' : ''; ?>>
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div id="test-modal-content" class="modal-content">
       <form @submit.prevent="submit">
@@ -410,6 +416,16 @@ function outline_star($class = '')
   <img class="site-footer-background img-fluid" src="https://babymountain.hu/wp-content/themes/babymountain2/assets/images/silent_night_2020.png" loading="lazy">
   <img class="site-footer-logo" src="<?php echo get_template_directory_uri(); ?>/static/images/logo.png" loading="lazy">
 </div>
+
+<?php if ($is_xmas) : ?>
+  <script>
+    window.termek = '<?php echo $_GET["termek"]; ?>';
+    window.addEventListener('load', function() {
+      const btn = document.querySelector('[data-bs-target="#test-modal"]');
+      btn.click();
+    });
+  </script>
+<?php endif; ?>
 
 <script>
   function Star() {
@@ -493,6 +509,10 @@ function outline_star($class = '')
           c: '/termek/silent-night-alomhozo-citromfuves-sohegyecske/',
           l: '/termek/silent-night-alomhozo-levendulas-cirbolyas-sohegyecske/'
         },
+        xmasVariants: {
+          c: 'citromverbena-cirbolyafenyo-kristalyso',
+          l: 'levendula-cirbolyafenyo-kristalyso'
+        }
       },
       computed: {
         questionPairs: function() {
@@ -517,6 +537,9 @@ function outline_star($class = '')
           });
         },
         resultUrl: function() {
+          if (window.termek) {
+            return '/termek/' + window.termek + '/?attribute_pa_toltelek=' + (this.result.c > this.result.l ? this.xmasVariants['c'] : this.xmasVariants['l']);
+          }
           return this.result.c > this.result.l ? this.links['c'] : this.links['l'];
         }
       },
