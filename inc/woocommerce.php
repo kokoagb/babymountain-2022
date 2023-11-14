@@ -299,7 +299,7 @@ function bm_change_order_status()
     $order->set_payment_method('bacs');
     $order->set_payment_method_title('Banki Átutalás');
     $order->save();
-    $message = "Kártyás fizetésed nem sikerült, rendelésed \"visszamondva\" státuszt kapott. Hogy rendelésed ne vesszen el, a Sóhegyecskéket kifizetheted banki átutalással is, melyhez az utalási adatok:\n\nNév: BabyMountain Kft.\nSzámlaszám: 11737083-24683180\nSzámlaveztő bank: OTP Bank\nIBAN: HU13117370832468318000000000\nBIC/Swift: OTPVHUHB";
+    $message = "Kártyás fizetésed nem sikerült, rendelésed \"visszamondva\" státuszt kapott. Hogy rendelésed ne vesszen el, a Sóhegyecskéket kifizetheted banki átutalással is, melyhez az utalási adatok:\n\nNév: BabyMountain Kft. \nSzámlaszám: 11737083 - 24683180 - 00000000\nSzámlaveztő bank: OTP Bank\nIBAN: HU13117370832468318000000000\nBIC/Swift: OTPVHUHB";
     $order->add_order_note($message, 1);
     if (wp_safe_redirect(wp_get_referer() ? wp_get_referer() : admin_url('edit.php?post_type=shop_order'))) {
       exit();
@@ -317,10 +317,45 @@ function bm_add_custom_order_status_actions_button_css()
 
 add_action('admin_head', 'bm_add_custom_order_status_actions_button_css');
 
-
 function bm_remove_additional_info_tab($tabs)
 {
   unset($tabs['additional_information']);
   return $tabs;
 }
 add_filter('woocommerce_product_tabs', 'bm_remove_additional_info_tab', 98);
+
+// KARÁCSONY 2022
+
+function bm_should_display_test_button()
+{
+  global $product;
+  $product_id = $product->get_id();
+  $bm_xmas_products_ids = array(22553, 22556);
+  $is_variant_selected = isset($_GET['attribute_pa_toltelek']) && !empty($_GET['attribute_pa_toltelek']);
+  return in_array($product_id, $bm_xmas_products_ids) && !$is_variant_selected;
+}
+
+function bm_before_add_to_cart_form()
+{
+  if (bm_should_display_test_button()) {
+    echo '<div style="display: none;">';
+  }
+}
+add_action('woocommerce_before_add_to_cart_form', 'bm_before_add_to_cart_form');
+
+function bm_after_add_to_cart_form()
+{
+  if (bm_should_display_test_button()) {
+    echo '</div>';
+  }
+}
+add_action('woocommerce_after_add_to_cart_form', 'bm_after_add_to_cart_form');
+
+function bm_single_product_summary()
+{
+  global $product;
+  if (bm_should_display_test_button()) {
+    echo '<a class="btn btn-primary mb-3" href="https://babymountain.hu/silent-night/?termek=' . $product->get_slug() . '">KITÖLTÖM A TESZTET</a>';
+  }
+}
+add_action('woocommerce_single_product_summary', 'bm_single_product_summary', 39);
