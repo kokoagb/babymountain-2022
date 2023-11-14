@@ -330,7 +330,8 @@ function bm_should_display_test_button()
 {
   global $product;
   $product_id = $product->get_id();
-  $bm_xmas_products_ids = array(22553, 22556);
+  // $bm_xmas_products_ids = array(22553, 22556);
+  $bm_xmas_products_ids = array(30108, 30111);
   $is_variant_selected = isset($_GET['attribute_pa_toltelek']) && !empty($_GET['attribute_pa_toltelek']);
   return in_array($product_id, $bm_xmas_products_ids) && !$is_variant_selected;
 }
